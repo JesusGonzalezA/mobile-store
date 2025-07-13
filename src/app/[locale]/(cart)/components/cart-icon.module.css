@@ -1,0 +1,7 @@
+.cart-icon-wrapper {
+	display: flex;
+	gap: 0.375rem;
+
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+}

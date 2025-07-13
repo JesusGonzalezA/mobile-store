@@ -1,8 +1,13 @@
 {
 	"common": {},
-	"list": {},
+	"list": {
+		"search": "Search for smartphone"
+	},
 	"components": {
 		"logo": "Logo",
-		"cart": "Shopping cart with {items} items"
+		"cart": {
+			"empty": "Shopping empty cart",
+			"items": "Shopping cart with {items} items"
+		}
 	}
 }

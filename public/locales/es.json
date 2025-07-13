@@ -1,8 +1,13 @@
 {
 	"common": {},
-	"list": {},
+	"list": {
+		"search": "Buscar smartphone"
+	},
 	"components": {
 		"logo": "Logo",
-		"cart": "Carrito de compra con {items} artículos"
+		"cart": {
+			"empty": "Carrito de compra vacío",
+			"items": "Carrito de compra con {items} artículos"
+		}
 	}
 }
