@@ -1,6 +1,6 @@
 import { injectFromBase } from "inversify"
-import { ApiResponse } from "@/shared/MobileService/domain/ApiResponse"
-import { MobileService } from "@/shared/MobileService/services/MobileService"
+import { ApiResponse } from "@/shared/mobile-service/domain/ApiResponse"
+import { MobileService } from "@/shared/mobile-service/services/MobileService"
 import { ProductListEntity } from "@/app/[locale]/(list)/domain/ProductListEntity"
 
 @injectFromBase()

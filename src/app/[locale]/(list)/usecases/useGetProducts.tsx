@@ -1,5 +1,5 @@
 import { useInjection } from "@/shared/di/hooks/useInjection"
-import { useFetch } from "@/shared/di/hooks/useFetch"
+import { useFetch } from "@/shared/mobile-service/hooks/useFetch"
 import { DI_SYMBOLS } from "@/app/[locale]/(list)/di/types"
 import { ProductListEntity } from "@/app/[locale]/(list)/domain/ProductListEntity"
 import { ProductListService } from "@/app/[locale]/(list)/services/ProductListService"

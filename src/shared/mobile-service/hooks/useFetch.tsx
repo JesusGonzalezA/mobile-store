@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { ApiResponse } from "@/shared/MobileService/domain/ApiResponse"
-import { ErrorEntity } from "@/shared/MobileService/domain/Error"
+import { ApiResponse } from "@/shared/mobile-service/domain/ApiResponse"
+import { ErrorEntity } from "@/shared/mobile-service/domain/Error"
 
 export const useFetch = <T,>(serviceQuery: () => ApiResponse<T>) => {
 	const [data, setData] = useState<T>()

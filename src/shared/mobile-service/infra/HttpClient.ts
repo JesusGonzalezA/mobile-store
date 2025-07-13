@@ -1,6 +1,6 @@
 import { inject } from "inversify"
-import { ApiResponse } from "@/shared/MobileService/domain/ApiResponse"
-import type { IHttpService } from "@/shared/MobileService/infra/HttpService"
+import { ApiResponse } from "@/shared/mobile-service/domain/ApiResponse"
+import type { IHttpService } from "@/shared/mobile-service/infra/HttpService"
 import { DI_SYMBOLS } from "@/shared/di/types"
 
 export interface IHttpClient {
