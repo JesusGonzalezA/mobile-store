@@ -1,6 +1,7 @@
 "use client"
+import React from "react"
 import { CustomErrorBoundary } from "@/components/CustomErrorBoundary"
-import { useGetProducts } from "@/app/[locale]/(list)/usecases/useGetProducts"
+import { useGetProducts } from "@app/list/usecases/useGetProducts"
 import { useCommonTranslation } from "@/shared/intl/hooks/useCommonTranslation"
 
 const TelephoneList = () => {
@@ -10,9 +11,12 @@ const TelephoneList = () => {
 	if (error) throw new Error("Loading error")
 
 	return (
-		<div>
-			{translations("hello")} {JSON.stringify(data, null, 2)}
-		</div>
+		<React.Fragment>
+			<div>
+				filter
+			</div>
+			<div>grid</div>
+		</React.Fragment>
 	)
 }
 

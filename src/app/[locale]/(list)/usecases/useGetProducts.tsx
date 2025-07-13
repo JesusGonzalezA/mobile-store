@@ -1,8 +1,8 @@
 import { useInjection } from "@/shared/di/hooks/useInjection"
 import { useFetch } from "@/shared/mobile-service/hooks/useFetch"
-import { DI_SYMBOLS } from "@/app/[locale]/(list)/di/types"
-import { ProductListEntity } from "@/app/[locale]/(list)/domain/ProductListEntity"
-import { ProductListService } from "@/app/[locale]/(list)/services/ProductListService"
+import { DI_SYMBOLS } from "@app/list/di/types"
+import { ProductListEntity } from "@app/list/domain/ProductListEntity"
+import { ProductListService } from "@app/list/services/ProductListService"
 
 export const useGetProducts = () => {
 	const service = useInjection<ProductListService>(

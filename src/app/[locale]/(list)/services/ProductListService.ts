@@ -1,7 +1,7 @@
 import { injectFromBase } from "inversify"
 import { ApiResponse } from "@/shared/mobile-service/domain/ApiResponse"
 import { MobileService } from "@/shared/mobile-service/services/MobileService"
-import { ProductListEntity } from "@/app/[locale]/(list)/domain/ProductListEntity"
+import { ProductListEntity } from "@app/list/domain/ProductListEntity"
 
 @injectFromBase()
 export class ProductListService extends MobileService {
