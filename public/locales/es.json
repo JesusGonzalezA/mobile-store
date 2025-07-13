@@ -1,7 +1,6 @@
 {
-	"common": {
-		"hello": "Hola mundo!"
-	},
+	"common": {},
+	"list": {},
 	"components": {
 		"logo": "Logo",
 		"cart": "Carrito de compra con {items} artículos"
