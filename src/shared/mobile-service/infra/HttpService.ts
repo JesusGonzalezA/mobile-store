@@ -11,7 +11,7 @@ export class HttpService implements IHttpService {
 			const res = await fetch(url, {
 				...request,
 				headers: {
-					...request?.headers
+					...request?.headers,
 				},
 			})
 

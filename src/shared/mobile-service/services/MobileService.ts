@@ -8,7 +8,7 @@ export abstract class MobileService {
 	constructor(@inject(DI_SYMBOLS.HttpClient) httpClient: HttpClient) {
 		this.httpClient = httpClient
 		this.httpClient.defaultHeaders = {
-			'X-Api-Key': process.env.NEXT_PUBLIC_API_KEY || '',
+			"X-Api-Key": process.env.NEXT_PUBLIC_API_KEY || "",
 		}
 	}
 }

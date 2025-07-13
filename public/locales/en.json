@@ -1,5 +1,9 @@
 {
 	"common": {
 		"hello": "Hello, world!"
+	},
+	"components": {
+		"logo": "Logo",
+		"cart": "Shopping cart with {items} items"
 	}
 }
