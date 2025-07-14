@@ -1,0 +1,22 @@
+{
+	"common": {},
+	"list": {
+		"search": {
+			"placeholder": "Buscar smartphone",
+			"clear": "Borrar búsqueda",
+			"results": "{count} resultados",
+			"error": "Error al cargar los productos"
+		},
+		"grid": {
+			"price": "Precio: {price}",
+			"label": "Resultados de smartphones"
+		}
+	},
+	"components": {
+		"logo": "Logo",
+		"cart": {
+			"empty": "Carrito de compra vacío",
+			"items": "Carrito de compra con {items} artículos"
+		}
+	}
+}
