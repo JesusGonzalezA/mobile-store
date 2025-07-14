@@ -4,7 +4,8 @@
 		"search": {
 			"placeholder": "Search for smartphone",
 			"clear": "Clear search",
-			"results": "{count} results"
+			"results": "{count} results",
+			"error": "Error loading products"
 		}
 	},
 	"components": {

@@ -4,8 +4,18 @@ import { MobileService } from "@/shared/mobile-service/services/MobileService"
 import { ProductListEntity } from "@app/list/domain/ProductListEntity"
 import { ProductListParams } from "@app/list/domain/ProductListParams"
 
+export interface IProductListService {
+	query(options: {
+		params?: ProductListParams
+		signal?: AbortSignal
+	}): ApiResponse<ProductListEntity[]>
+}
+
 @injectFromBase()
-export class ProductListService extends MobileService {
+export class ProductListService
+	extends MobileService
+	implements IProductListService
+{
 	query(options: {
 		params?: ProductListParams
 		signal?: AbortSignal

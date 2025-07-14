@@ -4,7 +4,8 @@
 		"search": {
 			"placeholder": "Buscar smartphone",
 			"clear": "Borrar búsqueda",
-			"results": "{count} resultados"
+			"results": "{count} resultados",
+			"error": "Error al cargar los productos"
 		}
 	},
 	"components": {
