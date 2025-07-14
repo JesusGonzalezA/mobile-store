@@ -8,13 +8,14 @@ export abstract class MobileService {
 	constructor(@inject(DI_SYMBOLS.HttpClient) httpClient: IHttpClient) {
 		this.httpClient = httpClient
 
-		if (
-			window != undefined &&
-			(!process.env.NEXT_PUBLIC_API_URL || !process.env.NEXT_PUBLIC_API_KEY)
-		) {
-			throw new Error(
-				"API URL and API Key must be defined in environment variables.",
-			)
+		// Only validate environment variables in the browser
+		// During SSG/SSR, these might not be available yet
+		if (typeof window !== "undefined") {
+			if (!process.env.NEXT_PUBLIC_API_URL || !process.env.NEXT_PUBLIC_API_KEY) {
+				throw new Error(
+					"API URL and API Key must be defined in environment variables.",
+				)
+			}
 		}
 
 		this.httpClient.defaultHeaders = {
