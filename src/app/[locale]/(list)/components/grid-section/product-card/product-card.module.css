@@ -1,77 +1,78 @@
 .card {
-    border: solid 0.5px var(--border-color);
+	border: solid 0.5px var(--border-color);
 
-    padding: 1rem;
+	padding: 1rem;
 
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 1.5rem;
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 1.5rem;
 
-    text-decoration: none;
+	text-decoration: none;
 
-    color: var(--primary-text-color);
+	color: var(--primary-text-color);
 
-    &:hover,
-    &:focus {
-        background: var(--primary-text-color);
-        color: var(--background-color);
+	&:hover,
+	&:focus {
+		background: var(--primary-text-color);
+		color: var(--background-color);
 
-        transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-    }
+		transition:
+			background 0.3s ease-in-out,
+			color 0.3s ease-in-out;
+	}
 
+	.card-footer {
+		display: flex;
+		flex-direction: row;
+		gap: 0.5rem;
 
-    .card-footer {
-        display: flex;
-        flex-direction: row;
-        gap: 0.5rem;
+		.card-information {
+			width: 100%;
 
-        .card-information {
-            width: 100%;
+			display: flex;
+			flex-direction: column-reverse;
+			gap: 0.25rem;
 
-            display: flex;
-            flex-direction: column-reverse;
-            gap: 0.25rem;
+			.title {
+				text-transform: uppercase;
 
-            .title {
-                text-transform: uppercase;
+				font-size: 0.75rem;
+				font-weight: 300;
+			}
 
-                font-size: 0.75rem;
-                font-weight: 300;
-            }
+			.description {
+				text-transform: uppercase;
+				color: var(--primary-text-color-non-relevant);
 
-            .description {
-                text-transform: uppercase;
-                color: var(--primary-text-color-non-relevant);
+				font-size: 0.625rem;
+				font-weight: 300;
+			}
 
-                font-size: 0.625rem;
-                font-weight: 300;
-            }
+			.around {
+				display: flex;
+				align-items: baseline;
+				justify-content: space-between;
+				width: 100%;
+			}
 
-            .around {
-                display: flex;
-                align-items: baseline;
-                justify-content: space-between;
-                width: 100%;
-            }
+			.price {
+				font-size: 0.75rem;
+				font-weight: 300;
+			}
+		}
+	}
 
-            .price {
-                font-size: 0.75rem;
-                font-weight: 300;
-            }
-        }
-    }
+	.img-wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-    .img-wrapper {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        img {
-            width: 19.5rem;
-            height: 16rem;
-            object-fit: scale-down;
-            background-image: none;
-        }
-    }
+		img {
+			width: 19.5rem;
+			height: 16rem;
+			object-fit: scale-down;
+			background-image: none;
+		}
+	}
 }

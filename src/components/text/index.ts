@@ -1,2 +1,2 @@
 export * from "./p"
-export * from './heading'
+export * from "./heading"

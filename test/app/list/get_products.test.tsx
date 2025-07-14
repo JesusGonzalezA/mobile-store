@@ -7,7 +7,7 @@ import { errorProductListServiceModule } from "./mocks/di/errorProductListServic
 import { renderWithProviders } from "../../utils/renderWithProviders"
 
 describe("Getting products", () => {
-	it('should render a grid section with products', async () => {
+	it("should render a grid section with products", async () => {
 		const { queryByText, intl, queryByRole } = renderWithProviders(<Page />, {
 			locale: "en",
 		})
@@ -17,8 +17,8 @@ describe("Getting products", () => {
 			expect(queryByText(zeroResultsText)).toBeNull()
 		})
 
-		const gridSection = queryByRole('region', { name: intl.list.grid.label })
-		expect(gridSection?.querySelectorAll('a').length).toBeGreaterThan(0)
+		const gridSection = queryByRole("region", { name: intl.list.grid.label })
+		expect(gridSection?.querySelectorAll("a").length).toBeGreaterThan(0)
 	})
 
 	describe("when the server is down", () => {

@@ -9,12 +9,17 @@ export const GridSection = () => {
 	const t = useListTranslation()
 
 	return (
-		<section className={styles["grid-section"]} aria-label={t('grid.label')}>
-			{
-				data?.map((product, index) => (
-					<ProductCard key={`${index}_${product.id}`} description={product.brand} imgUrl={product.imageUrl} title={product.name} price={product.basePrice} id={product.id} />
-				))
-			}
-		</section >
+		<section className={styles["grid-section"]} aria-label={t("grid.label")}>
+			{data?.map((product, index) => (
+				<ProductCard
+					key={`${index}_${product.id}`}
+					description={product.brand}
+					imgUrl={product.imageUrl}
+					title={product.name}
+					price={product.basePrice}
+					id={product.id}
+				/>
+			))}
+		</section>
 	)
 }
