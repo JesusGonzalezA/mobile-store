@@ -17,11 +17,11 @@ export abstract class MobileService {
 			const missingVars = []
 			if (!apiUrl) missingVars.push("NEXT_PUBLIC_API_URL")
 			if (!apiKey) missingVars.push("NEXT_PUBLIC_API_KEY")
-			
+
 			throw new Error(
 				`Missing required environment variables: ${missingVars.join(", ")}. ` +
-				"For GitHub Pages deployment, ensure these are set as Repository Variables " +
-				"in your GitHub repository settings (Settings > Secrets and variables > Actions > Variables)."
+					"For GitHub Pages deployment, ensure these are set as Repository Variables " +
+					"in your GitHub repository settings (Settings > Secrets and variables > Actions > Variables).",
 			)
 		}
 
