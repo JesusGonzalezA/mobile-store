@@ -18,8 +18,8 @@ export abstract class MobileService {
 		}
 
 		this.httpClient.defaultHeaders = {
-			"X-Api-Key": process.env.NEXT_PUBLIC_API_KEY,
+			"X-Api-Key": process.env.NEXT_PUBLIC_API_KEY || "",
 		}
-		this.httpClient.baseUrl = process.env.NEXT_PUBLIC_API_URL
+		this.httpClient.baseUrl = process.env.NEXT_PUBLIC_API_URL || ""
 	}
 }
