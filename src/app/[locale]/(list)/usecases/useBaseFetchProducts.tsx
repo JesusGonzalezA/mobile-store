@@ -28,7 +28,7 @@ export const useBaseFetchProducts = (props?: {
 		if (fetchResult.data && onFetch) {
 			onFetch(fetchResult.data)
 		}
-	}, [fetchResult.data, onFetch, fetchResult.isLoading])
+	}, [fetchResult.data?.length, fetchResult.isLoading])
 
 	if (fetchResult.error) throw new Error(fetchResult.error.message)
 

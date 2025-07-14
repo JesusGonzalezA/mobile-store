@@ -3,9 +3,10 @@ import React, { useState } from "react"
 import { useGetProducts } from "@app/list/usecases/useGetProducts"
 import { TelephoneListContext } from "@app/list/state/TelephoneListContext"
 import { ProductListEntity } from "@app/list/domain/ProductListEntity"
-import { FilterSection } from "@app/list/components/filter-section/FilterSection"
 import { useListTranslation } from "@app/list/intl/useListTranslations"
 import { CustomErrorBoundary } from "@/components/utils/CustomErrorBoundary"
+import { FilterSection } from "@app/list/components/filter-section/FilterSection"
+import { GridSection } from "@app/list/components/grid-section/GridSection"
 
 const TelephoneList = () => {
 	useGetProducts()
@@ -13,6 +14,7 @@ const TelephoneList = () => {
 	return (
 		<React.Fragment>
 			<FilterSection />
+			<GridSection />
 		</React.Fragment>
 	)
 }

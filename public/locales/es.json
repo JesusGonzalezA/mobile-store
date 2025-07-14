@@ -6,6 +6,10 @@
 			"clear": "Borrar búsqueda",
 			"results": "{count} resultados",
 			"error": "Error al cargar los productos"
+		},
+		"grid": {
+			"price": "Precio: {price}",
+			"label": "Resultados de smartphones"
 		}
 	},
 	"components": {
