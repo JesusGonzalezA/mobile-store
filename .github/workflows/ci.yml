@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo 🧾
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "npm"
+      - name: Install dependencies 📦
+        run: npm ci
+
+      - name: Format (prettier) 👨🏻‍🎨
+        run: npm run format:check
+      - name: Lint (ESLint) 🔦
+        run: npm run lint:check
+
+      - name: Run Vitest tests 🧪
+        run: npm run test
+
+      - name: Publish Vitest results
+        uses: dorny/test-reporter@v2
+        if: always()
+        with:
+          name: Vitest
+          badge-title: Vitest
+          path: reports/vitest.xml
+          reporter: jest-junit

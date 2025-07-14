@@ -1,3 +1,3 @@
-export * from "./header"
-export * from "./navbar"
-export * from "./main"
+export * from "./layout"
+export * from "./form"
+export * from "./text"

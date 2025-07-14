@@ -6,27 +6,37 @@
 		"dev": "next dev --turbopack",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
+		"lint:check": "next lint",
 		"lint:fix": "next lint --fix",
-		"format": "prettier --write .",
-		"format:check": "prettier --check ."
+		"format:check": "prettier --check .",
+		"format:fix": "prettier --write .",
+		"test": "vitest"
 	},
 	"dependencies": {
 		"next": "15.3.5",
 		"next-intl": "^4.3.4",
 		"react": "^19.0.0",
-		"react-dom": "^19.0.0"
+		"react-dom": "^19.0.0",
+		"use-debounce": "^10.0.5"
 	},
 	"devDependencies": {
 		"@eslint/eslintrc": "^3",
+		"@testing-library/dom": "^10.4.0",
+		"@testing-library/react": "^16.3.0",
+		"@testing-library/user-event": "^14.6.1",
 		"@types/node": "^20",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
+		"@vitejs/plugin-react": "^4.6.0",
 		"eslint": "^9",
 		"eslint-config-next": "15.3.5",
 		"inversify": "^7.5.4",
+		"jsdom": "^26.1.0",
+		"msw": "^2.10.4",
 		"prettier": "^3.6.2",
 		"prettier-config-a11y": "^1.1.2",
-		"typescript": "^5"
+		"typescript": "^5",
+		"vite-tsconfig-paths": "^5.1.4",
+		"vitest": "^3.2.4"
 	}
 }

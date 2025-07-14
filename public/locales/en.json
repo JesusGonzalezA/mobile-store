@@ -1,8 +1,18 @@
 {
 	"common": {},
-	"list": {},
+	"list": {
+		"search": {
+			"placeholder": "Search for smartphone",
+			"clear": "Clear search",
+			"results": "{count} results",
+			"error": "Error loading products"
+		}
+	},
 	"components": {
 		"logo": "Logo",
-		"cart": "Shopping cart with {items} items"
+		"cart": {
+			"empty": "Shopping empty cart",
+			"items": "Shopping cart with {items} items"
+		}
 	}
 }

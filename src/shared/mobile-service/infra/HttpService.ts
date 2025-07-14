@@ -15,13 +15,25 @@ export class HttpService implements IHttpService {
 				},
 			})
 
+			if (!res.ok) {
+				return {
+					ok: false,
+					error: (await res.json()) as ErrorEntity,
+				}
+			}
+
 			return {
 				ok: true,
 				value: res.json() as Promise<T>,
 			}
 		} catch (error) {
-			console.error(error)
-
+			if (error instanceof DOMException && error.name === "AbortError") {
+				return {
+					ok: true,
+					value: undefined,
+				}
+			}
+			console.log(error)
 			return {
 				ok: false,
 				error: error as ErrorEntity,

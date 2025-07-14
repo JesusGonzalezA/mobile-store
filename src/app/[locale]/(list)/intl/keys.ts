@@ -1,1 +1,5 @@
-export type keys = string
+export type keys =
+	| "search.placeholder"
+	| "search.clear"
+	| "search.results"
+	| "search.error"

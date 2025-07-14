@@ -1,29 +1,31 @@
 "use client"
-import React from "react"
-import { CustomErrorBoundary } from "@/components/CustomErrorBoundary"
+import React, { useState } from "react"
 import { useGetProducts } from "@app/list/usecases/useGetProducts"
-import { useCommonTranslation } from "@/shared/intl/hooks/useCommonTranslation"
+import { TelephoneListContext } from "@app/list/state/TelephoneListContext"
+import { ProductListEntity } from "@app/list/domain/ProductListEntity"
+import { FilterSection } from "@app/list/components/filter-section/FilterSection"
+import { useListTranslation } from "@app/list/intl/useListTranslations"
+import { CustomErrorBoundary } from "@/components/utils/CustomErrorBoundary"
 
 const TelephoneList = () => {
-	const translations = useCommonTranslation()
-	const { data, error, isLoading } = useGetProducts()
-	if (isLoading) return <p>Loading</p>
-	if (error) throw new Error("Loading error")
+	useGetProducts()
 
 	return (
 		<React.Fragment>
-			<div>
-				filter
-			</div>
-			<div>grid</div>
+			<FilterSection />
 		</React.Fragment>
 	)
 }
 
 const TelephoneListWrapper = () => {
+	const [data, setData] = useState<ProductListEntity[]>([])
+	const t = useListTranslation()
+
 	return (
-		<CustomErrorBoundary fallback={<p>No products found</p>}>
-			<TelephoneList />
+		<CustomErrorBoundary fallback={<p>{t("search.error")}</p>}>
+			<TelephoneListContext value={{ data, setData: (data) => setData(data) }}>
+				<TelephoneList />
+			</TelephoneListContext>
 		</CustomErrorBoundary>
 	)
 }

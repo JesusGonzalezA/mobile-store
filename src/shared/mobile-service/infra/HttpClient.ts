@@ -4,6 +4,9 @@ import type { IHttpService } from "@/shared/mobile-service/infra/HttpService"
 import { DI_SYMBOLS } from "@/shared/di/types"
 
 export interface IHttpClient {
+	baseUrl: string
+	defaultHeaders: HeadersInit
+
 	get<T>(url: string, request?: RequestInit): ApiResponse<T>
 	delete<T>(url: string, request?: RequestInit): ApiResponse<T>
 	post<T>(url: string, request?: RequestInit): ApiResponse<T>
@@ -14,6 +17,7 @@ export interface IHttpClient {
 export class HttpClient implements IHttpClient {
 	private _httpService: IHttpService
 	public defaultHeaders: HeadersInit = {}
+	public baseUrl: string = ""
 
 	constructor(@inject(DI_SYMBOLS.HttpService) httpService: IHttpService) {
 		this._httpService = httpService
@@ -36,7 +40,7 @@ export class HttpClient implements IHttpClient {
 	}
 
 	run<T>(url: string, request?: RequestInit | undefined) {
-		return this._httpService.run<T>(url, {
+		return this._httpService.run<T>(`${this.baseUrl}/${url}`, {
 			...request,
 			headers: {
 				...this.defaultHeaders,
