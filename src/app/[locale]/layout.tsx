@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
+import { setRequestLocale } from "next-intl/server"
 import { hasLocale, NextIntlClientProvider } from "next-intl"
 import { routing } from "@/shared/intl/routing"
 import { CartIconWrapper } from "@app/cart/components/CartIcon"
@@ -9,6 +10,10 @@ import "@/app/globals.css"
 export const metadata: Metadata = {
 	title: "Mobile Store",
 	description: "Mobile store application. Browse and buy mobile devices.",
+}
+
+export function generateStaticParams() {
+	return routing.locales.map((locale) => ({ locale }));
 }
 
 export default async function RootLayout({
@@ -22,6 +27,9 @@ export default async function RootLayout({
 	if (!hasLocale(routing.locales, locale)) {
 		notFound()
 	}
+
+	setRequestLocale(locale);
+
 	return (
 		<html lang={locale}>
 			<body>
