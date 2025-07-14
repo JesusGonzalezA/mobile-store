@@ -3,9 +3,7 @@ import userEvent, { UserEvent } from "@testing-library/user-event"
 import { waitFor } from "@testing-library/dom"
 import Page from "@app/list/(view)/page"
 import { renderWithProviders } from "../../utils/renderWithProviders"
-import container from "@/shared/di/container"
-import { DI_SYMBOLS } from "@/app/[locale]/(list)/di/types"
-import { MockErrorProductListService } from "./mocks/MockProductListService"
+import { server } from "../../mocks/server"
 
 describe("Filtering products", () => {
 	let user: UserEvent
@@ -63,11 +61,11 @@ describe("Filtering products", () => {
 
 		describe('when the server is down', () => {
 			it("error message should be shown to the user", async () => {
-				container.bind(DI_SYMBOLS.ProductListService).to(MockErrorProductListService)
+				server.close()
 
 				await user.type(
 					getByRole("textbox", { name: intl.list.search.placeholder }),
-					'as',
+					'asjkdakjsd',
 				)
 
 				await waitFor(() => {

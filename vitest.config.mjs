@@ -7,6 +7,10 @@ export default defineConfig({
 	test: {
 		environment: "jsdom",
 		setupFiles: "./vitest.setup.ts",
+		reporters: ['junit', 'verbose'],
+		outputFile: {
+			junit: './reports/vitest.xml',
+		},
 		server: {
 			deps: {
 				// https://github.com/vercel/next.js/issues/77200

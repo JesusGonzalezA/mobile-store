@@ -11,23 +11,24 @@ export const useBaseFetchProducts = (props?: {
 	params?: ProductListParams
 	onFetch?: (data: ProductListEntity[]) => void
 }) => {
+	const { options, params = {}, onFetch } = props || {}
 	const service = useInjection<ProductListService>(
 		DI_SYMBOLS.ProductListService,
 	)
 
 	const fetchResult = useFetch<ProductListEntity[], ProductListParams>(
-		(params?: ProductListParams, signal?: AbortSignal) =>
-			service.query({ params: { ...props?.params, ...params }, signal }),
-		{ options: props?.options },
+		(otherParams?: ProductListParams, signal?: AbortSignal) =>
+			service.query({ params: { ...params, ...otherParams }, signal }),
+		{ options },
 	)
 
 	useEffect(() => {
 		if (fetchResult.isLoading) return
 
-		if (fetchResult.data && props?.onFetch) {
-			props.onFetch(fetchResult.data)
+		if (fetchResult.data && onFetch) {
+			onFetch(fetchResult.data)
 		}
-	}, [fetchResult.data])
+	}, [fetchResult.data, onFetch, fetchResult.isLoading])
 
 	if (fetchResult.error) throw new Error(fetchResult.error.message)
 

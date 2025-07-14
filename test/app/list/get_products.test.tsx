@@ -1,15 +1,16 @@
 import { describe, expect, it } from "vitest"
 import { waitFor } from "@testing-library/dom"
-import Page from "@app/list/(view)/page"
-import { DI_SYMBOLS } from "@app/list/di/types"
 import container from "@/shared/di/container"
+import Page from "@app/list/(view)/page"
+import { diModule } from "@app/list/di/module"
+import { errorProductListServiceModule } from "./mocks/di/errorProductListServiceModule"
 import { renderWithProviders } from "../../utils/renderWithProviders"
-import { MockErrorProductListService } from "./mocks/MockProductListService"
 
 describe("Getting products", () => {
-    describe('when the server is down', () => {
+    describe("when the server is down", () => {
         it("error message should be shown to the user", async () => {
-            ; (await container.rebind(DI_SYMBOLS.ProductListService)).to(MockErrorProductListService).inTransientScope()
+            await container.unload(diModule)
+            await container.load(errorProductListServiceModule)
 
             const { queryByText, intl } = renderWithProviders(<Page />, {
                 locale: "en",

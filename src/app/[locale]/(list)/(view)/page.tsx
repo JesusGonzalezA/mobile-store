@@ -22,7 +22,7 @@ const TelephoneListWrapper = () => {
 	const t = useListTranslation()
 
 	return (
-		<CustomErrorBoundary fallback={<p>{t('search.error')}</p>}>
+		<CustomErrorBoundary fallback={<p>{t("search.error")}</p>}>
 			<TelephoneListContext value={{ data, setData: (data) => setData(data) }}>
 				<TelephoneList />
 			</TelephoneListContext>
