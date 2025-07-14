@@ -7,6 +7,20 @@ import { errorProductListServiceModule } from "./mocks/di/errorProductListServic
 import { renderWithProviders } from "../../utils/renderWithProviders"
 
 describe("Getting products", () => {
+	it('should render a grid section with products', async () => {
+		const { queryByText, intl, queryByRole } = renderWithProviders(<Page />, {
+			locale: "en",
+		})
+
+		await waitFor(() => {
+			const zeroResultsText = intl.list.search.results.replace("{count}", "0")
+			expect(queryByText(zeroResultsText)).toBeNull()
+		})
+
+		const gridSection = queryByRole('region', { name: intl.list.grid.label })
+		expect(gridSection?.querySelectorAll('a').length).toBeGreaterThan(0)
+	})
+
 	describe("when the server is down", () => {
 		it("error message should be shown to the user", async () => {
 			await container.unload(diModule)

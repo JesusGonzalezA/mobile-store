@@ -4,3 +4,4 @@ export type keys =
 	| "search.results"
 	| "search.error"
 	| "grid.price"
+	| "grid.label"

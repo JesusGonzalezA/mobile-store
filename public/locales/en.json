@@ -8,7 +8,8 @@
 			"error": "Error loading products"
 		},
 		"grid": {
-			"price": "Price: {price}"
+			"price": "Price: {price}",
+			"label": "Smartphone results"
 		}
 	},
 	"components": {

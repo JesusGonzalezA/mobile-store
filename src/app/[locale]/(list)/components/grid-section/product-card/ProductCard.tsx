@@ -1,7 +1,8 @@
-import { Heading, P } from "@/components/text"
-import styles from './product-card.module.css'
 import Link from "next/link"
+import { Heading, P } from "@/components/text"
 import { useListTranslation } from "@app/list/intl/useListTranslations"
+import styles from './product-card.module.css'
+import visuallyHiddenStyles from '@/components/styles/visually-hidden.module.css'
 
 type CardProps = {
     title: string
@@ -22,7 +23,7 @@ export const ProductCard = ({ title, description, imgUrl, price, id }: CardProps
                     <P className={styles.price} aria-hidden="true">
                         {price}
                     </P>
-                    <P className={styles["visually-hidden"]}>
+                    <P className={visuallyHiddenStyles["visually-hidden"]}>
                         {t("grid.price", { price })}
                     </P>
                 </div>
