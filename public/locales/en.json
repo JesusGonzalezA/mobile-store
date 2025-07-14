@@ -6,6 +6,9 @@
 			"clear": "Clear search",
 			"results": "{count} results",
 			"error": "Error loading products"
+		},
+		"grid": {
+			"price": "Price: {price}"
 		}
 	},
 	"components": {
