@@ -1,1 +1,1 @@
-export type keys = "search"
+export type keys = "search.placeholder" | "search.clear" | "search.results"

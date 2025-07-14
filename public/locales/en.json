@@ -1,7 +1,11 @@
 {
 	"common": {},
 	"list": {
-		"search": "Search for smartphone"
+		"search": {
+			"placeholder": "Search for smartphone",
+			"clear": "Clear search",
+			"results": "{count} results"
+		}
 	},
 	"components": {
 		"logo": "Logo",

@@ -1,14 +1,21 @@
 import { inject } from "inversify"
-import { HttpClient } from "../infra/HttpClient"
+import type { IHttpClient } from "@/shared/mobile-service/infra/HttpClient"
 import { DI_SYMBOLS } from "@/shared/di/types"
 
 export abstract class MobileService {
-	protected httpClient: HttpClient
+	protected httpClient: IHttpClient
 
-	constructor(@inject(DI_SYMBOLS.HttpClient) httpClient: HttpClient) {
+	constructor(@inject(DI_SYMBOLS.HttpClient) httpClient: IHttpClient) {
 		this.httpClient = httpClient
-		this.httpClient.defaultHeaders = {
-			"X-Api-Key": process.env.NEXT_PUBLIC_API_KEY || "",
+
+		if (!process.env.NEXT_PUBLIC_API_URL || !process.env.NEXT_PUBLIC_API_KEY) {
+			throw new Error(
+				"API URL and API Key must be defined in environment variables.",
+			)
 		}
+		this.httpClient.defaultHeaders = {
+			"X-Api-Key": process.env.NEXT_PUBLIC_API_KEY,
+		}
+		this.httpClient.baseUrl = process.env.NEXT_PUBLIC_API_URL
 	}
 }

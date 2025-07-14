@@ -2,12 +2,24 @@ import { injectFromBase } from "inversify"
 import { ApiResponse } from "@/shared/mobile-service/domain/ApiResponse"
 import { MobileService } from "@/shared/mobile-service/services/MobileService"
 import { ProductListEntity } from "@app/list/domain/ProductListEntity"
+import { ProductListParams } from "@app/list/domain/ProductListParams"
 
 @injectFromBase()
 export class ProductListService extends MobileService {
-	query(): ApiResponse<ProductListEntity> {
-		return this.httpClient.get<ProductListEntity>(
-			"https://pokeapi.co/api/v2/pokemon/ditto",
+	query(options: {
+		params?: ProductListParams
+		signal?: AbortSignal
+	}): ApiResponse<ProductListEntity[]> {
+		const searchParams = new URLSearchParams()
+		Object.entries(options.params ?? {}).forEach(([key, value]) => {
+			if (value !== undefined && value !== "") {
+				searchParams.set(key, String(value))
+			}
+		})
+
+		return this.httpClient.get<ProductListEntity[]>(
+			`products?${searchParams.toString()}`,
+			{ signal: options.signal },
 		)
 	}
 }

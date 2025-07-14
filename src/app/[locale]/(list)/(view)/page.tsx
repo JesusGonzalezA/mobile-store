@@ -1,26 +1,28 @@
 "use client"
-import React from "react"
+import React, { useState } from "react"
 import { useGetProducts } from "@app/list/usecases/useGetProducts"
+import { TelephoneListContext } from "@app/list/state/TelephoneListContext"
+import { ProductListEntity } from "@app/list/domain/ProductListEntity"
 import { FilterSection } from "@app/list/components/filter-section/FilterSection"
 import { CustomErrorBoundary } from "@/components/utils/CustomErrorBoundary"
 
 const TelephoneList = () => {
-	const { error, isLoading } = useGetProducts()
-	if (isLoading) return <p>Loading</p>
-	if (error) throw new Error("Loading error")
+	useGetProducts()
 
 	return (
 		<React.Fragment>
 			<FilterSection />
-			<div>grid</div>
 		</React.Fragment>
 	)
 }
 
 const TelephoneListWrapper = () => {
+	const [data, setData] = useState<ProductListEntity[]>([])
 	return (
 		<CustomErrorBoundary fallback={<p>No products found</p>}>
-			<TelephoneList />
+			<TelephoneListContext value={{ data, setData: (data) => setData(data) }}>
+				<TelephoneList />
+			</TelephoneListContext>
 		</CustomErrorBoundary>
 	)
 }

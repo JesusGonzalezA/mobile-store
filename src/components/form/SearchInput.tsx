@@ -1,10 +1,47 @@
+"use client"
+
+import { useState } from "react"
 import styles from "./search-input.module.css"
 
-export const SearchInput = ({ name }: { name: string }) => {
+type SearchInputProps = {
+	name: string
+	label: string
+	clearLabel: string
+	onChange?: (value: string) => void
+}
+
+export const SearchInput = ({
+	name,
+	label,
+	clearLabel,
+	onChange,
+}: SearchInputProps) => {
+	const [value, setValue] = useState<string>("")
+
+	const handleClear = () => {
+		setValue("")
+	}
+
+	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setValue(event.target.value)
+		onChange?.(event.target.value)
+	}
+
 	return (
 		<search className={styles.search}>
-			<input type="text" aria-label={name} placeholder={name} />
-			<button className={styles.clear}>
+			<input
+				type="text"
+				aria-label={label}
+				placeholder={label}
+				name={name}
+				value={value}
+				onChange={handleChange}
+			/>
+			<button
+				className={styles.clear}
+				aria-label={clearLabel}
+				onClick={handleClear}
+			>
 				<ClearIcon />
 			</button>
 		</search>
