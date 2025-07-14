@@ -7,18 +7,18 @@ import { errorProductListServiceModule } from "./mocks/di/errorProductListServic
 import { renderWithProviders } from "../../utils/renderWithProviders"
 
 describe("Getting products", () => {
-    describe("when the server is down", () => {
-        it("error message should be shown to the user", async () => {
-            await container.unload(diModule)
-            await container.load(errorProductListServiceModule)
+	describe("when the server is down", () => {
+		it("error message should be shown to the user", async () => {
+			await container.unload(diModule)
+			await container.load(errorProductListServiceModule)
 
-            const { queryByText, intl } = renderWithProviders(<Page />, {
-                locale: "en",
-            })
+			const { queryByText, intl } = renderWithProviders(<Page />, {
+				locale: "en",
+			})
 
-            await waitFor(() => {
-                expect(queryByText(intl.list.search.error)).not.toBeNull()
-            })
-        })
-    })
+			await waitFor(() => {
+				expect(queryByText(intl.list.search.error)).not.toBeNull()
+			})
+		})
+	})
 })

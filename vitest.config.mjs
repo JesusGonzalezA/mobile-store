@@ -7,9 +7,9 @@ export default defineConfig({
 	test: {
 		environment: "jsdom",
 		setupFiles: "./vitest.setup.ts",
-		reporters: ['junit', 'verbose'],
+		reporters: ["junit", "verbose"],
 		outputFile: {
-			junit: './reports/vitest.xml',
+			junit: "./reports/vitest.xml",
 		},
 		server: {
 			deps: {

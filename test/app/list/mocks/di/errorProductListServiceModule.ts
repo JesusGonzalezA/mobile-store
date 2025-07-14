@@ -3,8 +3,8 @@ import { DI_SYMBOLS } from "@app/list/di/types"
 import { MockErrorProductListService } from "../MockProductListService"
 
 export const errorProductListServiceModule = new ContainerModule((options) => {
-    options
-        .bind(DI_SYMBOLS.ProductListService)
-        .to(MockErrorProductListService)
-        .inTransientScope()
+	options
+		.bind(DI_SYMBOLS.ProductListService)
+		.to(MockErrorProductListService)
+		.inTransientScope()
 })

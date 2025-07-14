@@ -12,7 +12,7 @@ describe("Filtering products", () => {
 	let intl: ReturnType<typeof renderWithProviders>["intl"]
 	let zeroResultsText: string
 
-	describe('With mocked API', () => {
+	describe("With mocked API", () => {
 		beforeEach(async () => {
 			user = userEvent.setup()
 			const renderResult = renderWithProviders(<Page />, {
@@ -59,13 +59,13 @@ describe("Filtering products", () => {
 			})
 		})
 
-		describe('when the server is down', () => {
+		describe("when the server is down", () => {
 			it("error message should be shown to the user", async () => {
 				server.close()
 
 				await user.type(
 					getByRole("textbox", { name: intl.list.search.placeholder }),
-					'asjkdakjsd',
+					"asjkdakjsd",
 				)
 
 				await waitFor(() => {
