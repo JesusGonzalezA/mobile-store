@@ -1,4 +1,4 @@
-import { ErrorEntity } from "@/shared/mobile-service/domain/Error"
+import { ErrorEntity } from "@/shared/product-service/domain/Error"
 
 export interface ErrorOr<T> {
 	value?: T

@@ -1,8 +1,8 @@
 import { inject } from "inversify"
-import type { IHttpClient } from "@/shared/mobile-service/infra/HttpClient"
+import type { IHttpClient } from "@/shared/product-service/infra/HttpClient"
 import { DI_SYMBOLS } from "@/shared/di/types"
 
-export abstract class MobileService {
+export abstract class ProductService {
 	protected httpClient: IHttpClient
 
 	constructor(@inject(DI_SYMBOLS.HttpClient) httpClient: IHttpClient) {
