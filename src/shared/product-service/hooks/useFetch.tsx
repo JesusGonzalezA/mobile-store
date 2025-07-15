@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { ApiResponse } from "@/shared/mobile-service/domain/ApiResponse"
-import { ErrorEntity } from "@/shared/mobile-service/domain/Error"
+import { ApiResponse } from "@/shared/product-service/domain/ApiResponse"
+import { ErrorEntity } from "@/shared/product-service/domain/Error"
 
 export type FetchOptions = {
 	auto: boolean
