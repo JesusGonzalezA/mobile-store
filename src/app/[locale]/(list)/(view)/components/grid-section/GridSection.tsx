@@ -4,7 +4,7 @@ import { useContext } from "react"
 import { useLocale } from "use-intl"
 import { ProductListContext } from "@app/list/state/ProductListContext"
 import { useListTranslation } from "@app/list/intl/useListTranslations"
-import { ProductCard } from "@app/list/(view)/components/grid-section/product-card/ProductCard"
+import { ProductCard } from "@/components/organisms/product-card/ProductCard"
 import { Container } from "@/components"
 import styles from "./grid-section.module.css"
 

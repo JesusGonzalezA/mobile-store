@@ -1,0 +1,35 @@
+.title {
+	font-size: 1.25rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	margin-bottom: 2.5rem;
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.table tr {
+	border-bottom: 1px solid #eee;
+}
+
+.table tr:last-child {
+	border-bottom: none;
+}
+
+.specLabel {
+	padding: 0.75rem 1rem;
+	text-align: left;
+	font-weight: 300;
+	text-transform: uppercase;
+	width: 40%;
+}
+
+.specValue {
+	padding: 0.75rem 1rem;
+	text-align: left;
+	font-weight: 300;
+}

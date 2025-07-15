@@ -8,7 +8,6 @@
 			"error": "Error al cargar los productos"
 		},
 		"grid": {
-			"price": "Precio: {price}",
 			"label": "Resultados de smartphones"
 		}
 	},
@@ -16,7 +15,20 @@
 		"price": "Desde {price} EUR",
 		"add": "Añadir",
 		"color": "Color. Elige tu favorito.",
-		"storage": "Almacenamiento. ¿Cuánto necesitas?"
+		"storage": "Almacenamiento. ¿Cuánto necesitas?",
+		"similarProducts": "Productos similares",
+		"specification": "Especificaciones",
+		"brand": "Marca",
+		"name": "Nombre",
+		"description": "Descripción",
+		"screen": "Pantalla",
+		"resolution": "Resolución",
+		"processor": "Procesador",
+		"mainCamera": "Cámara principal",
+		"selfieCamera": "Cámara selfie",
+		"battery": "Batería",
+		"os": "OS",
+		"screenRefreshRate": "Tasa de refresco"
 	},
 	"components": {
 		"logo": "Logo",
@@ -26,6 +38,9 @@
 		},
 		"navbar": {
 			"return": "Atrás"
+		},
+		"productCard": {
+			"price": "Precio: {price}"
 		}
 	}
 }

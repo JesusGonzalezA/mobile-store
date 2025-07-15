@@ -1,8 +1,9 @@
-import { useCartTranslations } from "@/app/[locale]/(cart)/intl/useCartTranslations"
+import { useComponentTranslations } from "@/components/utils/intl/useComponentTranslations"
 import styles from "./cart-icon.module.css"
 
 export const CartIconWrapper = () => {
-	const t = useCartTranslations()
+	const t = useComponentTranslations()
+
 	return (
 		<div className={styles["cart-icon-wrapper"]}>
 			{" "}

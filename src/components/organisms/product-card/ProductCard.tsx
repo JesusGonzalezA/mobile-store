@@ -1,8 +1,8 @@
 import Link from "next/link"
 import Image from "next/image"
-import { useListTranslation } from "@app/list/intl/useListTranslations"
 import { Heading, P } from "@/components/text"
 import visuallyHiddenStyles from "@/components/styles/visually-hidden.module.css"
+import { useComponentTranslations } from "@/components/utils/intl/useComponentTranslations"
 import styles from "./product-card.module.css"
 
 type CardProps = {
@@ -20,7 +20,7 @@ export const ProductCard = ({
 	price,
 	url,
 }: CardProps) => {
-	const t = useListTranslation()
+	const t = useComponentTranslations()
 
 	return (
 		<Link className={styles.card} href={url}>
@@ -34,7 +34,7 @@ export const ProductCard = ({
 							{price}
 						</P>
 						<P className={visuallyHiddenStyles["visually-hidden"]}>
-							{t("grid.price", { price })}
+							{t("productCard.price", { price })}
 						</P>
 					</div>
 					<P className={styles.description}>{description}</P>

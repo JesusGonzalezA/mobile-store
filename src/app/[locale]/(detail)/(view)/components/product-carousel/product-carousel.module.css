@@ -1,0 +1,23 @@
+.title {
+	font-size: 1.25rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	margin-bottom: 2.5rem;
+}
+
+.carousel__container {
+    position: relative;
+    display: block;
+    height: 19.5rem;
+
+    .carousel__list { 
+list-style: none;
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    overflow-x: scroll;
+
+    display: flex;
+    }
+}

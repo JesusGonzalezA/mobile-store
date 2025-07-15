@@ -1,1 +1,1 @@
-export type keys = "cart.empty" | "cart.items"
+export type keys = ""

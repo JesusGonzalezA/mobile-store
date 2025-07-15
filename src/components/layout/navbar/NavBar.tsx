@@ -32,10 +32,7 @@ export const NavBar = ({
 				))}
 			</ul>
 			{hasReturn && (
-				<Link
-					href={baseUrl}
-					className={styles.return}
-				>
+				<Link href={baseUrl} className={styles.return}>
 					<BackIcon /> {t("navbar.return")}
 				</Link>
 			)}

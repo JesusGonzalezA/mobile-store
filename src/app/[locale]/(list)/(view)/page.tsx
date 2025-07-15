@@ -1,8 +1,8 @@
 "use client"
 
 import React from "react"
-import { Header, Main } from "@/components"
-import { AppNavBar } from "@/shared/navbar/AppNavBar"
+import { Header, Main, Footer } from "@/components"
+import { AppNavBar } from "@/components/organisms/navbar/AppNavBar"
 import { ProductListWrapper } from "@app/list/(view)/ProductList"
 
 const Page = () => {
@@ -14,6 +14,7 @@ const Page = () => {
 			<Main>
 				<ProductListWrapper />
 			</Main>
+			<Footer></Footer>
 		</React.Fragment>
 	)
 }

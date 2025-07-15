@@ -8,7 +8,6 @@
 			"error": "Error loading products"
 		},
 		"grid": {
-			"price": "Price: {price}",
 			"label": "Smartphone results"
 		}
 	},
@@ -16,7 +15,20 @@
 		"price": "From {price} EUR",
 		"add": "Add",
 		"color": "Color. Pick your favourite.",
-		"storage": "Storage. How much space do you need?"
+		"similarProducts": "Similar products",
+		"storage": "Storage. How much space do you need?",
+		"specification": "Specifications",
+		"brand": "Brand",
+		"name": "Name",
+		"description": "Description",
+		"screen": "Screen",
+		"resolution": "Resolution",
+		"processor": "Processor",
+		"mainCamera": "Main camera",
+		"selfieCamera": "Selfie camera",
+		"battery": "Battery",
+		"os": "OS",
+		"screenRefreshRate": "Screen refresh rate"
 	},
 	"components": {
 		"logo": "Logo",
@@ -26,6 +38,9 @@
 		},
 		"navbar": {
 			"return": "Back"
+		},
+		"productCard": {
+			"price": "Price: {price}"
 		}
 	}
 }

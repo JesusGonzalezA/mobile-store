@@ -2,8 +2,8 @@
 
 import React from "react"
 import dynamic from "next/dynamic"
-import { Header, Main, Container } from "@/components"
-import { AppNavBar } from "@/shared/navbar/AppNavBar"
+import { Header, Main, Container, Footer } from "@/components"
+import { AppNavBar } from "@/components/organisms/navbar/AppNavBar"
 
 const ProductDetailPageNoSSR = dynamic(() => import("./ProductDetail"), {
 	ssr: false,
@@ -20,6 +20,7 @@ export default function Page() {
 					<ProductDetailPageNoSSR />
 				</Main>
 			</Container>
+			<Footer></Footer>
 		</React.Fragment>
 	)
 }
