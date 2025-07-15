@@ -1,13 +1,24 @@
 import { NextConfig } from "next"
 import createNextIntlPlugin from "next-intl/plugin"
 
-const developmentConfig: NextConfig = {}
+const baseConfig: Partial<NextConfig> = {
+	images: {
+		remotePatterns: [
+			{
+				hostname: "prueba-tecnica-api-tienda-moviles.onrender.com/**",
+			},
+		],
+	},
+}
+
+const developmentConfig: NextConfig = {
+	...baseConfig,
+}
+
 const productionConfig: NextConfig = {
+	...baseConfig,
 	output: "export",
 	basePath: "/mobile-store",
-	images: {
-		unoptimized: true,
-	},
 	env: {
 		NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
 		NEXT_PUBLIC_API_KEY: process.env.NEXT_PUBLIC_API_KEY,
