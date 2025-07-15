@@ -1,1 +1,1 @@
-export { ProductService as MobileService } from "./services/ProductService"
+export { ProductService } from "./services/ProductService"

@@ -1,6 +1,6 @@
 import { injectFromBase } from "inversify"
-import { ApiResponse } from "@/shared/mobile-service/domain/ApiResponse"
-import { MobileService } from "@/shared/mobile-service/services/MobileService"
+import { ApiResponse } from "@/shared/product-service/domain/ApiResponse"
+import { ProductService } from "@/shared/product-service/services/ProductService"
 import { ProductListEntity } from "@app/list/domain/ProductListEntity"
 import { ProductListParams } from "@app/list/domain/ProductListParams"
 
@@ -13,7 +13,7 @@ export interface IProductListService {
 
 @injectFromBase()
 export class ProductListService
-	extends MobileService
+	extends ProductService
 	implements IProductListService
 {
 	query(options: {
