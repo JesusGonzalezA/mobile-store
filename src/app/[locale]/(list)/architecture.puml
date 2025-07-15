@@ -1,0 +1,12 @@
+@startuml
+    services --> domain
+
+    state --> domain
+
+    usecases --> di
+    usecases --> services
+    usecases --> domain
+    usecases --> state
+
+    di --> services
+@enduml

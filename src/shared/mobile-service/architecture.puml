@@ -1,0 +1,10 @@
+@startuml
+  services --> domain
+  services --> di
+  services --> infra
+
+  hooks --> domain
+
+  infra --> domain
+  infra --> di
+@enduml
