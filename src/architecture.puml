@@ -1,0 +1,4 @@
+@startuml
+  app --> shared
+  app --> components
+@enduml

@@ -5,8 +5,8 @@ import { TelephoneListContext } from "@app/list/state/TelephoneListContext"
 import { ProductListEntity } from "@app/list/domain/ProductListEntity"
 import { useListTranslation } from "@app/list/intl/useListTranslations"
 import { CustomErrorBoundary } from "@/components/utils/CustomErrorBoundary"
-import { FilterSection } from "@app/list/components/filter-section/FilterSection"
-import { GridSection } from "@app/list/components/grid-section/GridSection"
+import { FilterSection } from "@/app/[locale]/(list)/(view)/components/filter-section/FilterSection"
+import { GridSection } from "@/app/[locale]/(list)/(view)/components/grid-section/GridSection"
 
 const TelephoneList = () => {
 	useGetProducts()
