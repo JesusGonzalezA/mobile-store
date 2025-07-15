@@ -7,6 +7,8 @@ import { useListTranslation } from "@app/list/intl/useListTranslations"
 import { CustomErrorBoundary } from "@/components/utils/CustomErrorBoundary"
 import { FilterSection } from "@/app/[locale]/(list)/(view)/components/filter-section/FilterSection"
 import { GridSection } from "@/app/[locale]/(list)/(view)/components/grid-section/GridSection"
+import { Header, Main } from "@/components"
+import { AppNavBar } from "@/shared/navbar/AppNavBar"
 
 const TelephoneList = () => {
 	useGetProducts()
@@ -19,7 +21,7 @@ const TelephoneList = () => {
 	)
 }
 
-const TelephoneListWrapper = () => {
+export const TelephoneListWrapper = () => {
 	const [data, setData] = useState<ProductListEntity[]>([])
 	const t = useListTranslation()
 
@@ -32,4 +34,17 @@ const TelephoneListWrapper = () => {
 	)
 }
 
-export default TelephoneListWrapper
+const Page = () => {
+	return (
+		<React.Fragment>
+			<Header>
+				<AppNavBar hasReturn={false} />
+			</Header>
+			<Main>
+				<TelephoneListWrapper />
+			</Main>
+		</React.Fragment>
+	)
+}
+
+export default Page

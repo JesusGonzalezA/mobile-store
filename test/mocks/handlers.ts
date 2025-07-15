@@ -1,13 +1,7 @@
-import { ProductListEntity } from "@/app/[locale]/(list)/domain/ProductListEntity"
-import { readFile } from "fs/promises"
 import { http, HttpResponse } from "msw"
-import path from "path"
+import { products, product } from "./data"
 
 const baseUrl = process.env.NEXT_PUBLIC_API_URL || "https://api.example.com"
-
-const productsJsonPath = path.join("test", "mocks", "data", "products.json")
-const productsJsonContent = await readFile(productsJsonPath, "utf-8")
-const products = JSON.parse(productsJsonContent)
 
 export const handlers = [
 	http.get(`${baseUrl}/products`, async ({ request }) => {
@@ -22,11 +16,11 @@ export const handlers = [
 			? parseInt(searchParams.get("offset")!)
 			: 0
 
-		let filteredProducts = products as ProductListEntity[]
+		let filteredProducts = products
 		if (search) {
 			const searchLower = search.toLowerCase()
 			filteredProducts = products.filter(
-				(product: any) =>
+				(product) =>
 					product.name.toLowerCase().includes(searchLower) ||
 					product.brand.toLowerCase().includes(searchLower),
 			)
@@ -37,5 +31,8 @@ export const handlers = [
 		const paginatedProducts = filteredProducts.slice(startIndex, endIndex)
 
 		return HttpResponse.json(paginatedProducts)
+	}),
+	http.get(`${baseUrl}/products/:id`, async () => {
+		return HttpResponse.json(product)
 	}),
 ]

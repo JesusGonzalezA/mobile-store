@@ -1,9 +1,10 @@
 import { describe, it, expect, beforeEach } from "vitest"
 import userEvent, { UserEvent } from "@testing-library/user-event"
 import { waitFor } from "@testing-library/dom"
-import Page from "@app/list/(view)/page"
+import { TelephoneListWrapper } from "@app/list/(view)/page"
 import { renderWithProviders } from "../../utils/renderWithProviders"
 import { server } from "../../mocks/server"
+import { products } from "../../mocks/data"
 
 describe("Filtering products", () => {
 	let user: UserEvent
@@ -15,7 +16,7 @@ describe("Filtering products", () => {
 	describe("With mocked API", () => {
 		beforeEach(async () => {
 			user = userEvent.setup()
-			const renderResult = renderWithProviders(<Page />, {
+			const renderResult = renderWithProviders(<TelephoneListWrapper />, {
 				locale: "en",
 			})
 			queryByText = renderResult.queryByText
@@ -44,7 +45,7 @@ describe("Filtering products", () => {
 		})
 
 		describe("when user filters by unique product", () => {
-			const uniqueProduct = "Galaxy A25 5G"
+			const uniqueProduct = products[0].name
 
 			it("should update the counter", async () => {
 				await user.type(

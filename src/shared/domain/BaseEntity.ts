@@ -3,5 +3,4 @@ export type BaseEntity = {
 	brand: string
 	name: string
 	basePrice: number
-	imageUrl: string
 }

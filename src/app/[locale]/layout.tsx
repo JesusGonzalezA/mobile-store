@@ -3,9 +3,8 @@ import { notFound } from "next/navigation"
 import { setRequestLocale } from "next-intl/server"
 import { hasLocale, NextIntlClientProvider } from "next-intl"
 import { routing } from "@/shared/intl/routing"
-import { CartIconWrapper } from "@app/cart/(view)/components/CartIcon"
-import { Header, NavBar, Main } from "@/components"
 import "@/app/globals.css"
+import { Container } from "@/components"
 
 export const metadata: Metadata = {
 	title: "Mobile Store",
@@ -34,18 +33,7 @@ export default async function RootLayout({
 		<html lang={locale}>
 			<body>
 				<NextIntlClientProvider locale={locale}>
-					<Header>
-						<NavBar
-							baseUrl={`/${locale}`}
-							items={[
-								{
-									href: "/cart",
-									component: <CartIconWrapper />,
-								},
-							]}
-						/>
-					</Header>
-					<Main>{children}</Main>
+					<Container>{children}</Container>
 				</NextIntlClientProvider>
 			</body>
 		</html>

@@ -1,0 +1,13 @@
+.button {
+	width: 100%;
+	padding: 1rem;
+
+	&.uppercase {
+		text-transform: uppercase;
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+}

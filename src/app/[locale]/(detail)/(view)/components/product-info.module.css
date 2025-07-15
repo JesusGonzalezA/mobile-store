@@ -1,0 +1,67 @@
+.section__flex_space-between {
+	display: flex;
+	justify-content: space-between;
+}
+
+.image-container {
+	height: inherit;
+	aspect-ratio: 3/4;
+	overflow: hidden;
+	flex-shrink: 0;
+
+	img {
+		height: 100%;
+		width: auto;
+		object-fit: cover;
+		display: block;
+	}
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+
+	.title-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: calc(11rem / 16rem);
+
+		.title {
+			text-transform: uppercase;
+			font-weight: 300;
+			font-size: 1.5rem;
+		}
+
+		.price {
+			font-weight: 300;
+			font-size: 1.25rem;
+		}
+	}
+
+	form {
+		display: inherit;
+		flex-direction: inherit;
+		gap: inherit;
+
+		.selectors {
+			display: flex;
+			flex-direction: inherit;
+			gap: 2.5rem;
+
+			label {
+				text-transform: uppercase;
+				font-weight: 300;
+				font-size: 0.875rem;
+
+				display: flex;
+				flex-direction: column;
+				gap: 1.5rem;
+
+				.options {
+					display: flex;
+				}
+			}
+		}
+	}
+}

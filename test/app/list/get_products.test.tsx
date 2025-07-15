@@ -1,16 +1,19 @@
 import { describe, expect, it } from "vitest"
 import { waitFor } from "@testing-library/dom"
 import container from "@/shared/di/container"
-import Page from "@app/list/(view)/page"
+import { TelephoneListWrapper } from "@app/list/(view)/page"
 import { diModule } from "@app/list/di/module"
 import { errorProductListServiceModule } from "./mocks/di/errorProductListServiceModule"
 import { renderWithProviders } from "../../utils/renderWithProviders"
 
 describe("Getting products", () => {
 	it("should render a grid section with products", async () => {
-		const { queryByText, intl, queryByRole } = renderWithProviders(<Page />, {
-			locale: "en",
-		})
+		const { queryByText, intl, queryByRole } = renderWithProviders(
+			<TelephoneListWrapper />,
+			{
+				locale: "en",
+			},
+		)
 
 		await waitFor(() => {
 			const zeroResultsText = intl.list.search.results.replace("{count}", "0")
@@ -26,9 +29,12 @@ describe("Getting products", () => {
 			await container.unload(diModule)
 			await container.load(errorProductListServiceModule)
 
-			const { queryByText, intl } = renderWithProviders(<Page />, {
-				locale: "en",
-			})
+			const { queryByText, intl } = renderWithProviders(
+				<TelephoneListWrapper />,
+				{
+					locale: "en",
+				},
+			)
 
 			await waitFor(() => {
 				expect(queryByText(intl.list.search.error)).not.toBeNull()

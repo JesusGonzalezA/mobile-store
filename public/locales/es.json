@@ -12,12 +12,20 @@
 			"label": "Resultados de smartphones"
 		}
 	},
-	"detail": {},
+	"details": {
+		"price": "Desde {price} EUR",
+		"add": "Añadir",
+		"color": "Color. Elige tu favorito.",
+		"storage": "Almacenamiento. ¿Cuánto necesitas?"
+	},
 	"components": {
 		"logo": "Logo",
 		"cart": {
 			"empty": "Carrito de compra vacío",
 			"items": "Carrito de compra con {items} artículos"
+		},
+		"navbar": {
+			"return": "Atrás"
 		}
 	}
 }
