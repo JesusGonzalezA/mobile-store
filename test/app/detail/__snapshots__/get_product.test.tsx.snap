@@ -372,7 +372,7 @@ exports[`Getting product > should render a detailed view of the product 1`] = `
             >
               <a
                 class="_card_703bff"
-                href="/product?id=RLM-NOTE50"
+                href="/en/product?id=RLM-NOTE50"
               >
                 <div
                   class="_card-footer_703bff"
@@ -429,7 +429,7 @@ exports[`Getting product > should render a detailed view of the product 1`] = `
             >
               <a
                 class="_card_703bff"
-                href="/product?id=OPP-A18"
+                href="/en/product?id=OPP-A18"
               >
                 <div
                   class="_card-footer_703bff"
@@ -486,7 +486,7 @@ exports[`Getting product > should render a detailed view of the product 1`] = `
             >
               <a
                 class="_card_703bff"
-                href="/product?id=XMI-13TPro"
+                href="/en/product?id=XMI-13TPro"
               >
                 <div
                   class="_card-footer_703bff"
@@ -543,7 +543,7 @@ exports[`Getting product > should render a detailed view of the product 1`] = `
             >
               <a
                 class="_card_703bff"
-                href="/product?id=SMG-A05S"
+                href="/en/product?id=SMG-A05S"
               >
                 <div
                   class="_card-footer_703bff"
@@ -600,7 +600,7 @@ exports[`Getting product > should render a detailed view of the product 1`] = `
             >
               <a
                 class="_card_703bff"
-                href="/product?id=OPP-A60"
+                href="/en/product?id=OPP-A60"
               >
                 <div
                   class="_card-footer_703bff"
@@ -657,7 +657,7 @@ exports[`Getting product > should render a detailed view of the product 1`] = `
             >
               <a
                 class="_card_703bff"
-                href="/product?id=APL-IP13-128"
+                href="/en/product?id=APL-IP13-128"
               >
                 <div
                   class="_card-footer_703bff"

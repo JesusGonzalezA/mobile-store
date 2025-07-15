@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useRef } from "react"
 import { useDetailTranslations } from "@app/detail/intl/useDetailTranslations"
 import { ProductCard } from "@/components/organisms/product-card/ProductCard"
@@ -5,6 +7,7 @@ import { SimilarProduct } from "@app/detail/domain/SimilarProduct"
 import { Button, Heading } from "@/components"
 import styles from "./product-carousel.module.css"
 import { useCarousel } from "./useCarousel"
+import { useLocale } from "next-intl"
 
 type ProductCarouselProps = {
 	products: SimilarProduct[]
@@ -12,6 +15,7 @@ type ProductCarouselProps = {
 
 export const ProductCarousel = ({ products }: ProductCarouselProps) => {
 	const t = useDetailTranslations()
+	const locale = useLocale()
 	const carouselRef = useRef<HTMLDivElement>(null)
 	const {
 		canScrollLeft,
@@ -64,7 +68,7 @@ export const ProductCarousel = ({ products }: ProductCarouselProps) => {
 									title={product.name}
 									price={product.basePrice}
 									imgUrl={product.imageUrl}
-									url={`/product?id=${product.id}`}
+									url={`/${locale}/product?id=${product.id}`}
 								/>
 							</li>
 						))}
