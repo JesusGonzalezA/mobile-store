@@ -12,6 +12,7 @@
 			"label": "Smartphone results"
 		}
 	},
+	"detail": {},
 	"components": {
 		"logo": "Logo",
 		"cart": {

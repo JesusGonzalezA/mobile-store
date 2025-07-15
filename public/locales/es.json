@@ -12,6 +12,7 @@
 			"label": "Resultados de smartphones"
 		}
 	},
+	"detail": {},
 	"components": {
 		"logo": "Logo",
 		"cart": {

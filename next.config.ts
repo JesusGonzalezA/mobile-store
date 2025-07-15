@@ -29,10 +29,10 @@ const githubPagesConfig: NextConfig = {
 	...productionConfig,
 	images: {
 		...productionConfig.images,
-		unoptimized: true
+		unoptimized: true,
 	},
 	output: "export",
-	basePath: "/mobile-store"
+	basePath: "/mobile-store",
 }
 
 const withNextIntl = createNextIntlPlugin("./src/shared/intl/request.ts")

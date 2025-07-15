@@ -1,4 +1,6 @@
 @startuml
+    (view) --> intl
+    
     services --> domain
 
     state --> domain
