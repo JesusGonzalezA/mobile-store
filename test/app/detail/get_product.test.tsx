@@ -1,11 +1,21 @@
-import { describe, expect, it } from "vitest"
+import { describe, expect, it, vi } from "vitest"
 import { waitFor } from "@testing-library/dom"
-import { ProductDetailPageNoSSR } from "@app/detail/(view)/product/page"
+import ProductDetail from "@app/detail/(view)/product/ProductDetail"
 import { renderWithProviders } from "../../utils/renderWithProviders"
+
+vi.mock("next/navigation", async () => {
+	const actual = await vi.importActual("next/navigation")
+	return {
+		...actual,
+		useSearchParams: () => ({
+			get: (key: string) => (key === "id" ? "mocked-id" : null),
+		}),
+	}
+})
 
 describe("Getting product", () => {
 	it("should render a detailed view of the product", async () => {
-		const { queryByText } = renderWithProviders(<ProductDetailPageNoSSR />, {
+		const { queryByText } = renderWithProviders(<ProductDetail />, {
 			locale: "en",
 		})
 

@@ -5,7 +5,7 @@ import dynamic from "next/dynamic"
 import { Header, Main, Container } from "@/components"
 import { AppNavBar } from "@/shared/navbar/AppNavBar"
 
-export const ProductDetailPageNoSSR = dynamic(() => import("./ProductDetail"), {
+const ProductDetailPageNoSSR = dynamic(() => import("./ProductDetail"), {
 	ssr: false,
 })
 

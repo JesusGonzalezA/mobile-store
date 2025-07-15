@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from "vitest"
 import userEvent, { UserEvent } from "@testing-library/user-event"
 import { waitFor } from "@testing-library/dom"
-import { TelephoneListWrapper } from "@app/list/(view)/page"
+import { ProductListWrapper } from "@app/list/(view)/ProductList"
 import { renderWithProviders } from "../../utils/renderWithProviders"
 import { server } from "../../mocks/server"
 import { products } from "../../mocks/data"
@@ -16,7 +16,7 @@ describe("Filtering products", () => {
 	describe("With mocked API", () => {
 		beforeEach(async () => {
 			user = userEvent.setup()
-			const renderResult = renderWithProviders(<TelephoneListWrapper />, {
+			const renderResult = renderWithProviders(<ProductListWrapper />, {
 				locale: "en",
 			})
 			queryByText = renderResult.queryByText

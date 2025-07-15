@@ -1,6 +1,7 @@
 .section__flex_space-between {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .image-container {
