@@ -1,16 +1,16 @@
 "use client"
 
-import { usePathname } from "next/navigation"
-import { ProductCard } from "./product-card/ProductCard"
-import styles from "./grid-section.module.css"
 import { useContext } from "react"
 import { TelephoneListContext } from "@app/list/state/TelephoneListContext"
 import { useListTranslation } from "@app/list/intl/useListTranslations"
+import { ProductCard } from "@app/list/(view)/components/grid-section/product-card/ProductCard"
+import styles from "./grid-section.module.css"
+import { useLocale } from "use-intl"
 
 export const GridSection = () => {
 	const { data } = useContext(TelephoneListContext)
 	const t = useListTranslation()
-	const pathname = usePathname()
+	const locale = useLocale()
 
 	return (
 		<section className={styles["grid-section"]} aria-label={t("grid.label")}>
@@ -21,7 +21,7 @@ export const GridSection = () => {
 					imgUrl={product.imageUrl}
 					title={product.name}
 					price={product.basePrice}
-					url={`${pathname}/product?id=${product.id}`}
+					url={`/${locale}/product?id=${product.id}`}
 				/>
 			))}
 		</section>
