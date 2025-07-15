@@ -8,9 +8,12 @@ import { renderWithProviders } from "../../utils/renderWithProviders"
 
 describe("Getting products", () => {
 	it("should render a grid section with products", async () => {
-		const { queryByText, intl, queryByRole } = renderWithProviders(<TelephoneListWrapper />, {
-			locale: "en",
-		})
+		const { queryByText, intl, queryByRole } = renderWithProviders(
+			<TelephoneListWrapper />,
+			{
+				locale: "en",
+			},
+		)
 
 		await waitFor(() => {
 			const zeroResultsText = intl.list.search.results.replace("{count}", "0")
@@ -26,9 +29,12 @@ describe("Getting products", () => {
 			await container.unload(diModule)
 			await container.load(errorProductListServiceModule)
 
-			const { queryByText, intl } = renderWithProviders(<TelephoneListWrapper />, {
-				locale: "en",
-			})
+			const { queryByText, intl } = renderWithProviders(
+				<TelephoneListWrapper />,
+				{
+					locale: "en",
+				},
+			)
 
 			await waitFor(() => {
 				expect(queryByText(intl.list.search.error)).not.toBeNull()

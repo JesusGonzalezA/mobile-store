@@ -7,9 +7,12 @@ expect.extend(toHaveNoViolations)
 
 describe("Accessibility", () => {
 	it("should have no axe errors when the app is rendered", async () => {
-		const { queryByText, intl, container } = renderWithProviders(<TelephoneListWrapper />, {
-			locale: "en",
-		})
+		const { queryByText, intl, container } = renderWithProviders(
+			<TelephoneListWrapper />,
+			{
+				locale: "en",
+			},
+		)
 
 		await waitFor(() => {
 			const zeroResultsText = intl.list.search.results.replace("{count}", "0")

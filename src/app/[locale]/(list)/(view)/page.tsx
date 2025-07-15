@@ -15,8 +15,8 @@ const TelephoneList = () => {
 
 	return (
 		<React.Fragment>
-				<FilterSection />
-				<GridSection />
+			<FilterSection />
+			<GridSection />
 		</React.Fragment>
 	)
 }
