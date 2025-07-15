@@ -17,7 +17,7 @@ export const GridSection = () => {
 					imgUrl={product.imageUrl}
 					title={product.name}
 					price={product.basePrice}
-					url={`/detail?id=${product.id}`}
+					url={`/product?id=${product.id}`}
 				/>
 			))}
 		</section>
