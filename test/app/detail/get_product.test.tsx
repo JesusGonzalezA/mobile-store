@@ -16,6 +16,7 @@ vi.mock("next/navigation", async () => {
 describe("Getting product", () => {
 	it("should render a detailed view of the product", async () => {
 		const { queryByText } = renderWithProviders(<ProductDetail />, {
+
 			locale: "en",
 		})
 
