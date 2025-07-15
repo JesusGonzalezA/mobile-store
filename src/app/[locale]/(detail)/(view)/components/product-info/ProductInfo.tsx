@@ -41,7 +41,7 @@ export const ProductInfo = ({
 		const selectedOption = storageOptions.find((opt) => opt.capacity === option)
 
 		if (!selectedOption) return
-		
+
 		setStorage(selectedOption)
 		setPrice(selectedOption.price)
 	}

@@ -43,7 +43,7 @@ const ProductDetail = () => {
 			</div>
 
 			<div>
-					<ProductCarousel products={data.similarProducts} />
+				<ProductCarousel products={data.similarProducts} />
 			</div>
 		</div>
 	)

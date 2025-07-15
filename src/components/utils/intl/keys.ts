@@ -1,1 +1,6 @@
-export type keys = "logo" | "cart.empty" | "cart.items" | "navbar.return" | "productCard.price"
+export type keys =
+	| "logo"
+	| "cart.empty"
+	| "cart.items"
+	| "navbar.return"
+	| "productCard.price"

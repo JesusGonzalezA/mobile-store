@@ -12,21 +12,21 @@
 		opacity: 0.5;
 		cursor: not-allowed;
 		color: unset;
-		background-color: unset;;
+		background-color: unset;
 	}
 
 	&:hover {
-        transform: scale(1.08) translateY(-1px);
-    }
-    
-    &:active {
-        transform: scale(1.02) translateY(0px);
-        transition-duration: 0.1s;
-    }
-    
-    &:focus {
-        outline-offset: 5px;
-    }
+		transform: scale(1.08) translateY(-1px);
+	}
+
+	&:active {
+		transform: scale(1.02) translateY(0px);
+		transition-duration: 0.1s;
+	}
+
+	&:focus {
+		outline-offset: 5px;
+	}
 }
 
 .ghostButton {
@@ -43,10 +43,10 @@
 		opacity: 0.5;
 		cursor: not-allowed;
 		color: unset;
-		background-color: unset;;
+		background-color: unset;
 	}
-    
-    &:focus {
-        outline-offset: 5px;
-    }
+
+	&:focus {
+		outline-offset: 5px;
+	}
 }
