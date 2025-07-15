@@ -1,6 +1,6 @@
 import React from "react"
 import { getLocale } from "next-intl/server"
-import { Header, Main, NavBar } from "@/components"
+import { Container, Header, Main, NavBar } from "@/components"
 import { CartIconWrapper } from "@app/cart/(view)/components/CartIcon"
 
 export default async function RootLayout({
@@ -24,7 +24,9 @@ export default async function RootLayout({
                     hasReturn={true}
                 />
             </Header>
-            <Main>{children}</Main>
+            <Container centered={true}>
+                <Main>{children}</Main>
+            </Container>
         </React.Fragment>
     )
 }

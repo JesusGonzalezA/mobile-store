@@ -1,0 +1,18 @@
+.section__flex_space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-container {
+    height: inherit;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+        display: block;
+    }
+}

@@ -1,11 +1,12 @@
 import { useState } from "react"
+import Image from "next/image"
 import { ColorOption } from "@app/detail/domain/ColorOption"
 import { StorageOption } from "@app/detail/domain/StorageOption"
 import { useDetailTranslations } from "@app/detail/intl/useDetailTranslations"
-import { ColorRadioButton } from "./color-radio-button/ColorRadioButton"
 import { StorageRadioButton } from "./storage-radio-button/StorageRadioButton"
+import { ColorRadioButton } from "./color-radio-button/ColorRadioButton"
 import { Heading, P } from "@/components"
-import Image from "next/image"
+import styles from './product-info.module.css'
 
 type ProductInfoProps = {
     title: string
@@ -21,13 +22,15 @@ export const ProductInfo = ({ title, basePrice, storageOptions, colorOptions }: 
     const t = useDetailTranslations()
 
     return (
-        <section>
-            <Image
-                alt=""
-                src={color.imageUrl}
-                width={19.5 * 16}
-                height={16 * 16}
-            />
+        <section className={styles["section__flex_space-between"]}>
+            <div className={styles['image-container']}>
+                <Image
+                    alt=""
+                    src={color.imageUrl}
+                    width={19.5 * 16}
+                    height={16 * 16}
+                />
+            </div>
 
             <div>
                 <Heading as="h2">{title}</Heading>
