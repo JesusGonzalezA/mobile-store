@@ -1,7 +1,13 @@
 .wrapper {
 	position: relative;
+	padding: 2px;
 	width: 2rem;
 	height: 2rem;
+
+	&.checked {
+		outline: solid 1px blue;
+		outline-offset: 2px;
+	}
 
 	.input {
 		position: absolute;

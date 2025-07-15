@@ -5,8 +5,8 @@ import { ProductListWrapper } from "@app/list/(view)/ProductList"
 import { renderWithProviders } from "../../utils/renderWithProviders"
 expect.extend(toHaveNoViolations)
 
-describe("Accessibility", () => {
-	it("should have no axe errors when the app is rendered", async () => {
+describe("/en", () => {
+	it("should have no axe errors", async () => {
 		const { queryByText, intl, container } = renderWithProviders(
 			<ProductListWrapper />,
 			{

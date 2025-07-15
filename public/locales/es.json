@@ -17,6 +17,10 @@
 		"color": "Color. Elige tu favorito.",
 		"storage": "Almacenamiento. ¿Cuánto necesitas?",
 		"similarProducts": "Productos similares",
+		"carousel": {
+			"next": "Productos siguientes",
+			"previous": "Productos anteriores"
+		},
 		"specification": "Especificaciones",
 		"brand": "Marca",
 		"name": "Nombre",

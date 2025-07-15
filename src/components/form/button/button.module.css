@@ -1,6 +1,8 @@
 .button {
 	width: 100%;
 	padding: 1rem;
+	background-color: var(--primary-text-color);
+	color: var(--background-color);
 
 	&.uppercase {
 		text-transform: uppercase;
@@ -9,5 +11,42 @@
 	&:disabled {
 		opacity: 0.5;
 		cursor: not-allowed;
+		color: unset;
+		background-color: unset;;
 	}
+
+	&:hover {
+        transform: scale(1.08) translateY(-1px);
+    }
+    
+    &:active {
+        transform: scale(1.02) translateY(0px);
+        transition-duration: 0.1s;
+    }
+    
+    &:focus {
+        outline-offset: 5px;
+    }
+}
+
+.ghostButton {
+	width: 100%;
+	padding: 1rem;
+	background-color: transparent;
+	border: transparent;
+
+	&.uppercase {
+		text-transform: uppercase;
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+		color: unset;
+		background-color: unset;;
+	}
+    
+    &:focus {
+        outline-offset: 5px;
+    }
 }

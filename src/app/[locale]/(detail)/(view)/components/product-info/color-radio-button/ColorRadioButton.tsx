@@ -20,14 +20,13 @@ export const ColorRadioButton: React.FC<ColorRadioButtonProps> = ({
 	onChange,
 }) => {
 	const id = useId()
-
+	const checkedStyle = checked ? styles.checked : ""
+	
 	return (
 		<div
-			className={styles.wrapper}
+			className={`${styles.wrapper} ${checkedStyle}`}
 			style={{
-				background: color,
-				outlineOffset: "2px",
-				outline: checked ? "solid 2px blue" : "transparent",
+				background: color
 			}}
 		>
 			<label htmlFor={id} className={visuallyHiddenStyles["visually-hidden"]}>

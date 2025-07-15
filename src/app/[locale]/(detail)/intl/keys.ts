@@ -1,7 +1,7 @@
 import type { BaseEntity } from "@/shared/domain/BaseEntity"
 import type { ProductSpecs } from "@app/detail/domain/ProductSpecs"
 
-type baseKeys = "price" | "add" | "color" | "storage" | "specification" | "similarProducts"
+type baseKeys = "price" | "add" | "color" | "storage" | "specification" | "similarProducts" | "carousel.next" | "carousel.previous"
 type BaseEntityKeys = keyof Omit<BaseEntity, "id" | "basePrice">
 type ProductSpecsKeys = keyof ProductSpecs
 

@@ -41,7 +41,7 @@ export const ProductInfo = ({
 		const selectedOption = storageOptions.find((opt) => opt.capacity === option)
 
 		if (!selectedOption) return
-
+		
 		setStorage(selectedOption)
 		setPrice(selectedOption.price)
 	}
@@ -86,7 +86,7 @@ export const ProductInfo = ({
 								{colorOptions.map((option) => (
 									<ColorRadioButton
 										key={option.hexCode}
-										checked={option.name === color?.name}
+										checked={option === color}
 										name={"color"}
 										label={option.name}
 										color={option.hexCode}

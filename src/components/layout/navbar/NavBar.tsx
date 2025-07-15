@@ -1,6 +1,10 @@
+"use client"
+
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { useComponentTranslations } from "@/components/utils/intl/useComponentTranslations"
 import styles from "./navbar.module.css"
+import { GhostButton } from "@/components/form"
 
 interface Item {
 	href: string
@@ -16,6 +20,11 @@ export const NavBar = ({
 	hasReturn?: boolean
 }) => {
 	const t = useComponentTranslations()
+	const router = useRouter()
+
+	const handleGoBack = () => {
+		router.back()
+	}
 
 	return (
 		<nav className={styles.navbar}>
@@ -32,9 +41,11 @@ export const NavBar = ({
 				))}
 			</ul>
 			{hasReturn && (
-				<Link href={baseUrl} className={styles.return}>
-					<BackIcon /> {t("navbar.return")}
-				</Link>
+				<GhostButton onClick={handleGoBack} className={styles.return}>
+					<div>
+						<BackIcon /> {t("navbar.return")}
+					</div>
+				</GhostButton>
 			)}
 		</nav>
 	)

@@ -1,0 +1,718 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Getting product > should render a detailed view of the product 1`] = `
+<div>
+  <div
+    class="_container_439e06"
+  >
+    <div>
+      <section
+        class="_section__flex_space-between_ac1ec7"
+      >
+        <div
+          class="_image-container_ac1ec7"
+        >
+          <img
+            alt=""
+            data-nimg="1"
+            decoding="async"
+            height="256"
+            loading="lazy"
+            src="/_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FSMG-S24U-titanium-violet.webp&w=640&q=75"
+            srcset="/_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FSMG-S24U-titanium-violet.webp&w=384&q=75 1x, /_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FSMG-S24U-titanium-violet.webp&w=640&q=75 2x"
+            style="color: transparent;"
+            width="312"
+          />
+        </div>
+        <div
+          class="_form_ac1ec7"
+        >
+          <div
+            class="_title-wrapper_ac1ec7"
+          >
+            <h2
+              class="_heading_839e02 _title_ac1ec7"
+            >
+              Galaxy S24 Ultra
+            </h2>
+            <p
+              class="_p_c7a6d3 _price_ac1ec7"
+            >
+              From 1329 EUR
+            </p>
+          </div>
+          <form>
+            <div
+              class="_selectors_ac1ec7"
+            >
+              <label>
+                Storage. How much space do you need?
+                <div
+                  class="_options_ac1ec7"
+                >
+                  <div
+                    class="_wrapper_4ebab1"
+                  >
+                    <input
+                      class="_input_4ebab1"
+                      id="«r0»"
+                      name="capacity"
+                      type="radio"
+                      value="256 GB"
+                    />
+                    <label
+                      class="_label_4ebab1 "
+                      for="«r0»"
+                    >
+                      256 GB
+                    </label>
+                  </div>
+                  <div
+                    class="_wrapper_4ebab1"
+                  >
+                    <input
+                      class="_input_4ebab1"
+                      id="«r1»"
+                      name="capacity"
+                      type="radio"
+                      value="512 GB"
+                    />
+                    <label
+                      class="_label_4ebab1 "
+                      for="«r1»"
+                    >
+                      512 GB
+                    </label>
+                  </div>
+                  <div
+                    class="_wrapper_4ebab1"
+                  >
+                    <input
+                      class="_input_4ebab1"
+                      id="«r2»"
+                      name="capacity"
+                      type="radio"
+                      value="1 TB"
+                    />
+                    <label
+                      class="_label_4ebab1 "
+                      for="«r2»"
+                    >
+                      1 TB
+                    </label>
+                  </div>
+                </div>
+              </label>
+              <label>
+                Color. Pick your favourite.
+                <div
+                  class="_options_ac1ec7"
+                  style="gap: 1rem;"
+                >
+                  <div
+                    class="_wrapper_b44dbe "
+                    style="background: rgb(142, 111, 150);"
+                  >
+                    <label
+                      class="_visually-hidden_cbe165"
+                      for="«r3»"
+                    >
+                      Titanium Violet
+                    </label>
+                    <input
+                      class="_input_b44dbe"
+                      id="«r3»"
+                      name="color"
+                      type="radio"
+                      value="Titanium Violet"
+                    />
+                  </div>
+                  <div
+                    class="_wrapper_b44dbe "
+                    style="background: rgb(0, 0, 0);"
+                  >
+                    <label
+                      class="_visually-hidden_cbe165"
+                      for="«r4»"
+                    >
+                      Titanium Black
+                    </label>
+                    <input
+                      class="_input_b44dbe"
+                      id="«r4»"
+                      name="color"
+                      type="radio"
+                      value="Titanium Black"
+                    />
+                  </div>
+                  <div
+                    class="_wrapper_b44dbe "
+                    style="background: rgb(128, 128, 128);"
+                  >
+                    <label
+                      class="_visually-hidden_cbe165"
+                      for="«r5»"
+                    >
+                      Titanium Gray
+                    </label>
+                    <input
+                      class="_input_b44dbe"
+                      id="«r5»"
+                      name="color"
+                      type="radio"
+                      value="Titanium Gray"
+                    />
+                  </div>
+                  <div
+                    class="_wrapper_b44dbe "
+                    style="background: rgb(255, 255, 0);"
+                  >
+                    <label
+                      class="_visually-hidden_cbe165"
+                      for="«r6»"
+                    >
+                      Titanium Yellow
+                    </label>
+                    <input
+                      class="_input_b44dbe"
+                      id="«r6»"
+                      name="color"
+                      type="radio"
+                      value="Titanium Yellow"
+                    />
+                  </div>
+                </div>
+              </label>
+            </div>
+            <button
+              class="_button_5232f3 _uppercase_5232f3 "
+              disabled=""
+            >
+              Add
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
+    <div>
+      <h2
+        class="_heading_839e02 _title_ac7617"
+      >
+        Specifications
+      </h2>
+      <table
+        class="_table_ac7617"
+      >
+        <tbody>
+          <tr>
+            <th
+              class="_specLabel_ac7617"
+            >
+              Screen
+            </th>
+            <td
+              class="_specValue_ac7617"
+            >
+              6.8" Dynamic AMOLED 2X
+            </td>
+          </tr>
+          <tr>
+            <th
+              class="_specLabel_ac7617"
+            >
+              Resolution
+            </th>
+            <td
+              class="_specValue_ac7617"
+            >
+              3120 x 1440 pixels
+            </td>
+          </tr>
+          <tr>
+            <th
+              class="_specLabel_ac7617"
+            >
+              Processor
+            </th>
+            <td
+              class="_specValue_ac7617"
+            >
+              Qualcomm Snapdragon 8 Gen 3 for Galaxy Octa-Core
+            </td>
+          </tr>
+          <tr>
+            <th
+              class="_specLabel_ac7617"
+            >
+              Main camera
+            </th>
+            <td
+              class="_specValue_ac7617"
+            >
+              200 MP (F1.7) Principal, OIS + 10 MP (F2.4) Zoom x3, OIS + 12 MP (F2.2) Ultra gran angular + 50 MP (F3.4) Zoom x5, OIS
+            </td>
+          </tr>
+          <tr>
+            <th
+              class="_specLabel_ac7617"
+            >
+              Selfie camera
+            </th>
+            <td
+              class="_specValue_ac7617"
+            >
+              12 MP
+            </td>
+          </tr>
+          <tr>
+            <th
+              class="_specLabel_ac7617"
+            >
+              Battery
+            </th>
+            <td
+              class="_specValue_ac7617"
+            >
+              5000 mAh
+            </td>
+          </tr>
+          <tr>
+            <th
+              class="_specLabel_ac7617"
+            >
+              OS
+            </th>
+            <td
+              class="_specValue_ac7617"
+            >
+              Android 14
+            </td>
+          </tr>
+          <tr>
+            <th
+              class="_specLabel_ac7617"
+            >
+              Screen refresh rate
+            </th>
+            <td
+              class="_specValue_ac7617"
+            >
+              120 Hz
+            </td>
+          </tr>
+          <tr>
+            <th
+              class="_specLabel_ac7617"
+            >
+              Brand
+            </th>
+            <td
+              class="_specValue_ac7617"
+            >
+              Samsung
+            </td>
+          </tr>
+          <tr>
+            <th
+              class="_specLabel_ac7617"
+            >
+              Name
+            </th>
+            <td
+              class="_specValue_ac7617"
+            >
+              Galaxy S24 Ultra
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h2
+        class="_heading_839e02 _title_1a3fa9"
+      >
+        Similar products
+      </h2>
+      <div
+        class="_carousel__wrapper_1a3fa9"
+      >
+        <div
+          class="_carousel__buttons_1a3fa9"
+        >
+          <button
+            aria-label="Previous products"
+            class="_button_5232f3  _carousel__button_1a3fa9 _carousel__button_left_1a3fa9"
+            disabled=""
+          >
+            <span
+              aria-hidden="true"
+            >
+              &lt;
+            </span>
+          </button>
+          <button
+            aria-label="Next products"
+            class="_button_5232f3  _carousel__button_1a3fa9 _carousel__button_right_1a3fa9"
+          >
+            <span
+              aria-hidden="true"
+            >
+              &gt;
+            </span>
+          </button>
+        </div>
+        <div
+          class="_carousel__container_1a3fa9"
+        >
+          <ul
+            class="_carousel__list_1a3fa9"
+          >
+            <li
+              class="_carousel__item_1a3fa9"
+            >
+              <a
+                class="_card_703bff"
+                href="/product?id=RLM-NOTE50"
+              >
+                <div
+                  class="_card-footer_703bff"
+                >
+                  <div
+                    class="_card-information_703bff"
+                  >
+                    <div
+                      class="_around_703bff"
+                    >
+                      <h2
+                        class="_heading_839e02 _title_703bff"
+                      >
+                        Note 50
+                      </h2>
+                      <p
+                        aria-hidden="true"
+                        class="_p_c7a6d3 _price_703bff"
+                      >
+                        99
+                      </p>
+                      <p
+                        class="_p_c7a6d3 _visually-hidden_cbe165"
+                      >
+                        Price: 99
+                      </p>
+                    </div>
+                    <p
+                      class="_p_c7a6d3 _description_703bff"
+                    >
+                      realme
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="_img-wrapper_703bff"
+                >
+                  <img
+                    alt=""
+                    data-nimg="1"
+                    decoding="async"
+                    height="256"
+                    loading="lazy"
+                    src="/_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FRLM-NOTE50-midnight-black.webp&w=640&q=75"
+                    srcset="/_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FRLM-NOTE50-midnight-black.webp&w=384&q=75 1x, /_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FRLM-NOTE50-midnight-black.webp&w=640&q=75 2x"
+                    style="color: transparent;"
+                    width="312"
+                  />
+                </div>
+              </a>
+            </li>
+            <li
+              class="_carousel__item_1a3fa9"
+            >
+              <a
+                class="_card_703bff"
+                href="/product?id=OPP-A18"
+              >
+                <div
+                  class="_card-footer_703bff"
+                >
+                  <div
+                    class="_card-information_703bff"
+                  >
+                    <div
+                      class="_around_703bff"
+                    >
+                      <h2
+                        class="_heading_839e02 _title_703bff"
+                      >
+                        A18
+                      </h2>
+                      <p
+                        aria-hidden="true"
+                        class="_p_c7a6d3 _price_703bff"
+                      >
+                        99
+                      </p>
+                      <p
+                        class="_p_c7a6d3 _visually-hidden_cbe165"
+                      >
+                        Price: 99
+                      </p>
+                    </div>
+                    <p
+                      class="_p_c7a6d3 _description_703bff"
+                    >
+                      OPPO
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="_img-wrapper_703bff"
+                >
+                  <img
+                    alt=""
+                    data-nimg="1"
+                    decoding="async"
+                    height="256"
+                    loading="lazy"
+                    src="/_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FOPP-A18-azul-brillante.webp&w=640&q=75"
+                    srcset="/_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FOPP-A18-azul-brillante.webp&w=384&q=75 1x, /_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FOPP-A18-azul-brillante.webp&w=640&q=75 2x"
+                    style="color: transparent;"
+                    width="312"
+                  />
+                </div>
+              </a>
+            </li>
+            <li
+              class="_carousel__item_1a3fa9"
+            >
+              <a
+                class="_card_703bff"
+                href="/product?id=XMI-13TPro"
+              >
+                <div
+                  class="_card-footer_703bff"
+                >
+                  <div
+                    class="_card-information_703bff"
+                  >
+                    <div
+                      class="_around_703bff"
+                    >
+                      <h2
+                        class="_heading_839e02 _title_703bff"
+                      >
+                        13T Pro
+                      </h2>
+                      <p
+                        aria-hidden="true"
+                        class="_p_c7a6d3 _price_703bff"
+                      >
+                        553.31
+                      </p>
+                      <p
+                        class="_p_c7a6d3 _visually-hidden_cbe165"
+                      >
+                        Price: 553.31
+                      </p>
+                    </div>
+                    <p
+                      class="_p_c7a6d3 _description_703bff"
+                    >
+                      XIAOMI
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="_img-wrapper_703bff"
+                >
+                  <img
+                    alt=""
+                    data-nimg="1"
+                    decoding="async"
+                    height="256"
+                    loading="lazy"
+                    src="/_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FXMI-13TPro-negro.webp&w=640&q=75"
+                    srcset="/_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FXMI-13TPro-negro.webp&w=384&q=75 1x, /_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FXMI-13TPro-negro.webp&w=640&q=75 2x"
+                    style="color: transparent;"
+                    width="312"
+                  />
+                </div>
+              </a>
+            </li>
+            <li
+              class="_carousel__item_1a3fa9"
+            >
+              <a
+                class="_card_703bff"
+                href="/product?id=SMG-A05S"
+              >
+                <div
+                  class="_card-footer_703bff"
+                >
+                  <div
+                    class="_card-information_703bff"
+                  >
+                    <div
+                      class="_around_703bff"
+                    >
+                      <h2
+                        class="_heading_839e02 _title_703bff"
+                      >
+                        Galaxy A05s
+                      </h2>
+                      <p
+                        aria-hidden="true"
+                        class="_p_c7a6d3 _price_703bff"
+                      >
+                        119
+                      </p>
+                      <p
+                        class="_p_c7a6d3 _visually-hidden_cbe165"
+                      >
+                        Price: 119
+                      </p>
+                    </div>
+                    <p
+                      class="_p_c7a6d3 _description_703bff"
+                    >
+                      Samsung
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="_img-wrapper_703bff"
+                >
+                  <img
+                    alt=""
+                    data-nimg="1"
+                    decoding="async"
+                    height="256"
+                    loading="lazy"
+                    src="/_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FSMG-A05S-black.webp&w=640&q=75"
+                    srcset="/_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FSMG-A05S-black.webp&w=384&q=75 1x, /_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FSMG-A05S-black.webp&w=640&q=75 2x"
+                    style="color: transparent;"
+                    width="312"
+                  />
+                </div>
+              </a>
+            </li>
+            <li
+              class="_carousel__item_1a3fa9"
+            >
+              <a
+                class="_card_703bff"
+                href="/product?id=OPP-A60"
+              >
+                <div
+                  class="_card-footer_703bff"
+                >
+                  <div
+                    class="_card-information_703bff"
+                  >
+                    <div
+                      class="_around_703bff"
+                    >
+                      <h2
+                        class="_heading_839e02 _title_703bff"
+                      >
+                        A60
+                      </h2>
+                      <p
+                        aria-hidden="true"
+                        class="_p_c7a6d3 _price_703bff"
+                      >
+                        179
+                      </p>
+                      <p
+                        class="_p_c7a6d3 _visually-hidden_cbe165"
+                      >
+                        Price: 179
+                      </p>
+                    </div>
+                    <p
+                      class="_p_c7a6d3 _description_703bff"
+                    >
+                      OPPO
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="_img-wrapper_703bff"
+                >
+                  <img
+                    alt=""
+                    data-nimg="1"
+                    decoding="async"
+                    height="256"
+                    loading="lazy"
+                    src="/_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FOPP-A60-midnight-purple.webp&w=640&q=75"
+                    srcset="/_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FOPP-A60-midnight-purple.webp&w=384&q=75 1x, /_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FOPP-A60-midnight-purple.webp&w=640&q=75 2x"
+                    style="color: transparent;"
+                    width="312"
+                  />
+                </div>
+              </a>
+            </li>
+            <li
+              class="_carousel__item_1a3fa9"
+            >
+              <a
+                class="_card_703bff"
+                href="/product?id=APL-IP13-128"
+              >
+                <div
+                  class="_card-footer_703bff"
+                >
+                  <div
+                    class="_card-information_703bff"
+                  >
+                    <div
+                      class="_around_703bff"
+                    >
+                      <h2
+                        class="_heading_839e02 _title_703bff"
+                      >
+                        iPhone 13
+                      </h2>
+                      <p
+                        aria-hidden="true"
+                        class="_p_c7a6d3 _price_703bff"
+                      >
+                        619
+                      </p>
+                      <p
+                        class="_p_c7a6d3 _visually-hidden_cbe165"
+                      >
+                        Price: 619
+                      </p>
+                    </div>
+                    <p
+                      class="_p_c7a6d3 _description_703bff"
+                    >
+                      Apple
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="_img-wrapper_703bff"
+                >
+                  <img
+                    alt=""
+                    data-nimg="1"
+                    decoding="async"
+                    height="256"
+                    loading="lazy"
+                    src="/_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FAPL-IP13-128-medianoche.webp&w=640&q=75"
+                    srcset="/_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FAPL-IP13-128-medianoche.webp&w=384&q=75 1x, /_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FAPL-IP13-128-medianoche.webp&w=640&q=75 2x"
+                    style="color: transparent;"
+                    width="312"
+                  />
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

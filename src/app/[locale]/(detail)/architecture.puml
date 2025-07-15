@@ -9,4 +9,6 @@
     usecases --> state
 
     di --> services
+    
+    intl --> domain
 @enduml

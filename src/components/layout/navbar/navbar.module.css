@@ -32,16 +32,15 @@ nav.navbar {
 
 		width: fit-content;
 
-		display: flex;
-		gap: 0.25rem;
-		align-items: center;
+		& > div {
+			display: flex;
+			gap: 0.25rem;
+			align-items: center;
 
-		text-transform: uppercase;
-		text-decoration: none;
-		color: var(--primary-text-color);
-		font-weight: 300;
-		font-size: 0.75rem;
-
+			font-weight: 300;
+			font-size: 0.75rem;
+		}
+		
 		&:hover {
 			text-decoration: underline;
 

@@ -15,8 +15,12 @@
 		"price": "From {price} EUR",
 		"add": "Add",
 		"color": "Color. Pick your favourite.",
-		"similarProducts": "Similar products",
 		"storage": "Storage. How much space do you need?",
+		"similarProducts": "Similar products",
+		"carousel": {
+			"next": "Next products",
+			"previous": "Previous products"
+		},
 		"specification": "Specifications",
 		"brand": "Brand",
 		"name": "Name",
