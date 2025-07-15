@@ -6,7 +6,13 @@ interface Item {
 	href: string
 	component: React.ReactNode
 }
-export const NavBar = ({ items, baseUrl }: { items?: Item[], baseUrl: string }) => {
+export const NavBar = ({
+	items,
+	baseUrl,
+}: {
+	items?: Item[]
+	baseUrl: string
+}) => {
 	const t = useComponentTranslations()
 
 	return (

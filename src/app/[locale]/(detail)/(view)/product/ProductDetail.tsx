@@ -1,15 +1,25 @@
 "use client"
 
-import { useSearchParams } from "next/navigation"
+import { notFound, useSearchParams } from "next/navigation"
+import { useGetProduct } from "@app/detail/usecases/useGetProduct"
 
 const ProductDetail = () => {
 	const searchParams = useSearchParams()
 	const productId = searchParams.get("id")
 
+	if (!productId) {
+		notFound()
+	}
+
+	const { data, isLoading } = useGetProduct({ id: productId })
+
+	if (isLoading) {
+		return <div>Loading...</div>
+	}
+
 	return (
 		<div>
-			<h1>Product Detail</h1>
-			<p>Product ID: {productId}</p>
+			{JSON.stringify(data, null, 2)}
 		</div>
 	)
 }

@@ -1,4 +1,4 @@
-export type ProductListParams = {
+export type QueryProductsParams = {
 	search?: string
 	limit?: number
 	offset?: number

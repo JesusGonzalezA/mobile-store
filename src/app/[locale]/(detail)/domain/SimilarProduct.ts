@@ -1,3 +1,3 @@
 import { BaseEntity } from "@/shared/domain/BaseEntity"
 
-export type ProductListEntity = BaseEntity
+export type SimilarProduct = BaseEntity

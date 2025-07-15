@@ -1,1 +1,3 @@
-export const DI_SYMBOLS = {} as const
+export const DI_SYMBOLS = {
+	ProductDetailService: Symbol("ProductDetailService"),
+} as const
