@@ -17,15 +17,17 @@ export const useFetch = <DataType, QueryParamsType>(
 	const [error, setError] = useState<ErrorEntity>()
 	const [isLoading, setIsloading] = useState<boolean>(true)
 	const query = async (params?: QueryParamsType, signal?: AbortSignal) => {
-		serviceQuery(params, signal).then((response) => {
-			if (response.ok && response.value instanceof Promise) {
-				response.value.then((value) => setData(value))
-			} else if (!response.ok) {
-				setError(response.error)
-			}
-		}).finally(() => {
-			setIsloading(false)
-		})
+		serviceQuery(params, signal)
+			.then((response) => {
+				if (response.ok && response.value instanceof Promise) {
+					response.value.then((value) => setData(value))
+				} else if (!response.ok) {
+					setError(response.error)
+				}
+			})
+			.finally(() => {
+				setIsloading(false)
+			})
 	}
 
 	useEffect(() => {

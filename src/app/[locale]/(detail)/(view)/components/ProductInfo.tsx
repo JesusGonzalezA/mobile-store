@@ -5,71 +5,104 @@ import { StorageOption } from "@app/detail/domain/StorageOption"
 import { useDetailTranslations } from "@app/detail/intl/useDetailTranslations"
 import { StorageRadioButton } from "./storage-radio-button/StorageRadioButton"
 import { ColorRadioButton } from "./color-radio-button/ColorRadioButton"
-import { Heading, P } from "@/components"
-import styles from './product-info.module.css'
+import { Heading, P, Button } from "@/components"
+import styles from "./product-info.module.css"
 
 type ProductInfoProps = {
-    title: string
-    basePrice: number
-    storageOptions: StorageOption[]
-    colorOptions: ColorOption[]
+	title: string
+	basePrice: number
+	storageOptions: StorageOption[]
+	colorOptions: ColorOption[]
 }
 
-export const ProductInfo = ({ title, basePrice, storageOptions, colorOptions }: ProductInfoProps) => {
-    const [price, setPrice] = useState<number>(basePrice)
-    const [storage, setStorage] = useState<StorageOption>();
-    const [color, setColor] = useState<ColorOption>(colorOptions[0]);
-    const t = useDetailTranslations()
+export const ProductInfo = ({
+	title,
+	basePrice,
+	storageOptions,
+	colorOptions,
+}: ProductInfoProps) => {
+	const t = useDetailTranslations()
+	const [price, setPrice] = useState<number>(basePrice)
+	const [imageUrl, setImageUrl] = useState<string>(colorOptions[0].imageUrl)
+	const [storage, setStorage] = useState<StorageOption>()
+	const [color, setColor] = useState<ColorOption>()
+	const isDisabled = !storage || !color
 
-    return (
-        <section className={styles["section__flex_space-between"]}>
-            <div className={styles['image-container']}>
-                <Image
-                    alt=""
-                    src={color.imageUrl}
-                    width={19.5 * 16}
-                    height={16 * 16}
-                />
-            </div>
+	const handleColorChange = (value: string) => {
+		const selectedColor = colorOptions.find((option) => option.name === value)
 
-            <div>
-                <Heading as="h2">{title}</Heading>
-                <P>{t('price', { price })}</P>
+		if (!selectedColor) return
 
-                <form>
-                    <label>
-                        {t('color')}
+		setColor(selectedColor)
+		setImageUrl(selectedColor.imageUrl)
+	}
 
-                        {colorOptions.map((option) => (
-                            <ColorRadioButton
-                                key={option.name}
-                                checked={option === color}
-                                name={option.name}
-                                label={option.name}
-                                value={option.hexCode}
-                                onChange={() => setColor(option)}
-                            />
-                        ))}
-                    </label>
+	const handleStorageChange = (option: string) => {
+		const selectedOption = storageOptions.find((opt) => opt.capacity === option)
 
-                    <label>
-                        {t('storage')}
+		if (!selectedOption) return
 
-                        {storageOptions.map((option) => (
-                            <StorageRadioButton
-                                key={option.capacity}
-                                checked={option === storage}
-                                onChange={() => setStorage(option)}
-                                label={option.capacity}
-                                name={option.capacity}
-                                value={option.capacity}
-                            />
-                        ))}
-                    </label>
+		setStorage(selectedOption)
+		setPrice(selectedOption.price)
+	}
 
-                    <button>{t('add')}</button>
-                </form>
-            </div>
-        </section >
-    )
+	return (
+		<section className={styles["section__flex_space-between"]}>
+			<div className={styles["image-container"]}>
+				<Image alt="" src={imageUrl} width={19.5 * 16} height={16 * 16} />
+			</div>
+
+			<div className={styles.form}>
+				<div className={styles["title-wrapper"]}>
+					<Heading as="h2" className={styles.title}>
+						{title}
+					</Heading>
+					<P className={styles.price}>{t("price", { price })}</P>
+				</div>
+
+				<form>
+					<div className={styles.selectors}>
+						<label>
+							{t("storage")}
+
+							<div className={styles.options}>
+								{storageOptions.map((option) => (
+									<StorageRadioButton
+										key={option.capacity}
+										checked={option === storage}
+										onChange={handleStorageChange}
+										label={option.capacity}
+										name={"capacity"}
+										value={option.capacity}
+									/>
+								))}
+							</div>
+						</label>
+
+						<label>
+							{t("color")}
+
+							<div className={styles.options} style={{ gap: "1rem" }}>
+								{colorOptions.map((option) => (
+									<ColorRadioButton
+										key={option.hexCode}
+										checked={option.name === color?.name}
+										name={"color"}
+										label={option.name}
+										color={option.hexCode}
+										value={option.name}
+										onChange={handleColorChange}
+									/>
+								))}
+							</div>
+						</label>
+					</div>
+
+					<Button uppercase={true} disabled={isDisabled}>
+						{t("add")}
+					</Button>
+				</form>
+			</div>
+		</section>
+	)
 }

@@ -15,8 +15,6 @@ export const GridSection = () => {
 
 	return (
 		<Container>
-
-
 			<section className={styles["grid-section"]} aria-label={t("grid.label")}>
 				{data?.map((product, index) => (
 					<ProductCard

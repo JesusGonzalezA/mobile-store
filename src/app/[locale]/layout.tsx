@@ -33,9 +33,7 @@ export default async function RootLayout({
 		<html lang={locale}>
 			<body>
 				<NextIntlClientProvider locale={locale}>
-					<Container>
-						{children}
-					</Container>
+					<Container>{children}</Container>
 				</NextIntlClientProvider>
 			</body>
 		</html>

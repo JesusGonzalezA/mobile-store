@@ -1,1 +1,1 @@
-export type keys = "price" | 'add' | 'color' | 'storage'
+export type keys = "price" | "add" | "color" | "storage"
