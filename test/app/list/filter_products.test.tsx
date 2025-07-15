@@ -4,6 +4,7 @@ import { waitFor } from "@testing-library/dom"
 import Page from "@app/list/(view)/page"
 import { renderWithProviders } from "../../utils/renderWithProviders"
 import { server } from "../../mocks/server"
+import { products } from "../../mocks/data"
 
 describe("Filtering products", () => {
 	let user: UserEvent
@@ -44,7 +45,7 @@ describe("Filtering products", () => {
 		})
 
 		describe("when user filters by unique product", () => {
-			const uniqueProduct = "Galaxy A25 5G"
+			const uniqueProduct = products[0].name
 
 			it("should update the counter", async () => {
 				await user.type(
