@@ -6,16 +6,16 @@ import { GetProductParams } from "@app/detail/domain/GetProductParams"
 import { ProductEntity } from "@app/detail/domain/ProductEntity"
 
 export const useGetProduct = (params: GetProductParams) => {
-    const service = useInjection<IProductDetailService>(
-        DI_SYMBOLS.ProductDetailService,
-    )
+	const service = useInjection<IProductDetailService>(
+		DI_SYMBOLS.ProductDetailService,
+	)
 
-    const fetchResult = useFetch<ProductEntity, GetProductParams>(
-        () => service.get(params),
-        { options: { auto: true } },
-    )
+	const fetchResult = useFetch<ProductEntity, GetProductParams>(
+		() => service.get(params),
+		{ options: { auto: true } },
+	)
 
-    if (fetchResult.error) throw new Error(fetchResult.error.message)
+	if (fetchResult.error) throw new Error(fetchResult.error.message)
 
-    return fetchResult
+	return fetchResult
 }
