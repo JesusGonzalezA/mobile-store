@@ -1,6 +1,6 @@
-import container from "@/shared/di/container"
 import { loadEnvConfig } from "@next/env"
 import { cleanup } from "@testing-library/react"
+import container from "@/shared/di/container"
 import { afterAll, afterEach, beforeAll, beforeEach } from "vitest"
 import { server } from "./test/mocks/server"
 
