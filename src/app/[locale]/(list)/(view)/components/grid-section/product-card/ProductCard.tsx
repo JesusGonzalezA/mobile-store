@@ -1,8 +1,9 @@
 import Link from "next/link"
-import { Heading, P } from "@/components/text"
+import Image from "next/image"
 import { useListTranslation } from "@app/list/intl/useListTranslations"
-import styles from "./product-card.module.css"
+import { Heading, P } from "@/components/text"
 import visuallyHiddenStyles from "@/components/styles/visually-hidden.module.css"
+import styles from "./product-card.module.css"
 
 type CardProps = {
 	title: string
@@ -40,7 +41,13 @@ export const ProductCard = ({
 				</div>
 			</div>
 			<div className={styles["img-wrapper"]}>
-				<img alt="" src={imgUrl} loading="lazy" />
+				<Image
+					alt=""
+					src={imgUrl}
+					loading="lazy"
+					width={19.5 * 16}
+					height={16 * 16}
+				/>
 			</div>
 		</Link>
 	)
