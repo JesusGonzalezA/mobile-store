@@ -1,3 +1,6 @@
+"use client"
+
+import { usePathname } from "next/navigation"
 import { ProductCard } from "./product-card/ProductCard"
 import styles from "./grid-section.module.css"
 import { useContext } from "react"
@@ -7,6 +10,7 @@ import { useListTranslation } from "@app/list/intl/useListTranslations"
 export const GridSection = () => {
 	const { data } = useContext(TelephoneListContext)
 	const t = useListTranslation()
+	const pathname = usePathname()
 
 	return (
 		<section className={styles["grid-section"]} aria-label={t("grid.label")}>
@@ -17,7 +21,7 @@ export const GridSection = () => {
 					imgUrl={product.imageUrl}
 					title={product.name}
 					price={product.basePrice}
-					url={`./product?id=${product.id}`}
+					url={`${pathname}/product?id=${product.id}`}
 				/>
 			))}
 		</section>
