@@ -3,7 +3,7 @@ import { notFound } from "next/navigation"
 import { setRequestLocale } from "next-intl/server"
 import { hasLocale, NextIntlClientProvider } from "next-intl"
 import { routing } from "@/shared/intl/routing"
-import { CartIconWrapper } from "@app/cart/components/CartIcon"
+import { CartIconWrapper } from "@app/cart/(view)/components/CartIcon"
 import { Header, NavBar, Main } from "@/components"
 import "@/app/globals.css"
 

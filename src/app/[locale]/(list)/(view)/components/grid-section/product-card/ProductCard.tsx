@@ -10,7 +10,7 @@ type CardProps = {
 	description: string
 	imgUrl: string
 	price: number
-	id: string
+	url: string
 }
 
 export const ProductCard = ({
@@ -18,12 +18,12 @@ export const ProductCard = ({
 	description,
 	imgUrl,
 	price,
-	id,
+	url,
 }: CardProps) => {
 	const t = useListTranslation()
 
 	return (
-		<Link className={styles.card} href={`/product/${id}`}>
+		<Link className={styles.card} href={url}>
 			<div className={styles["card-footer"]}>
 				<div className={styles["card-information"]}>
 					<div className={styles.around}>
