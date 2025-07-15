@@ -6,14 +6,14 @@ interface Item {
 	href: string
 	component: React.ReactNode
 }
-export const NavBar = ({ items }: { items?: Item[] }) => {
+export const NavBar = ({ items, baseUrl }: { items?: Item[], baseUrl: string }) => {
 	const t = useComponentTranslations()
 
 	return (
 		<nav className={styles.navbar}>
 			<ul>
 				<li>
-					<Link href="/">
+					<Link href={baseUrl}>
 						<LogoIcon name={t("logo")} />
 					</Link>
 				</li>

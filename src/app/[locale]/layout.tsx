@@ -36,6 +36,7 @@ export default async function RootLayout({
 				<NextIntlClientProvider locale={locale}>
 					<Header>
 						<NavBar
+							baseUrl={`/${locale}`}
 							items={[
 								{
 									href: "/cart",
