@@ -1,7 +1,4 @@
-"use client"
-
 import Link from "next/link"
-import { useRouter } from "next/navigation"
 import { useComponentTranslations } from "@/components/utils/intl/useComponentTranslations"
 import styles from "./navbar.module.css"
 
@@ -19,7 +16,6 @@ export const NavBar = ({
 	hasReturn?: boolean
 }) => {
 	const t = useComponentTranslations()
-	const router = useRouter()
 
 	return (
 		<nav className={styles.navbar}>
@@ -39,7 +35,6 @@ export const NavBar = ({
 				<Link
 					href={baseUrl}
 					className={styles.return}
-					onClick={() => router.back()}
 				>
 					<BackIcon /> {t("navbar.return")}
 				</Link>
