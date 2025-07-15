@@ -17,8 +17,6 @@ const developmentConfig: NextConfig = {
 
 const productionConfig: NextConfig = {
 	...baseConfig,
-	output: "export",
-	basePath: "/mobile-store",
 	env: {
 		NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
 		NEXT_PUBLIC_API_KEY: process.env.NEXT_PUBLIC_API_KEY,
@@ -27,7 +25,17 @@ const productionConfig: NextConfig = {
 	compress: true,
 }
 
+const githubPagesConfig: NextConfig = {
+	...productionConfig,
+	images: {
+		...productionConfig.images,
+		unoptimized: true
+	},
+	output: "export",
+	basePath: "/mobile-store"
+}
+
 const withNextIntl = createNextIntlPlugin("./src/shared/intl/request.ts")
 export default withNextIntl(
-	process.env.NODE_ENV === "production" ? productionConfig : developmentConfig,
+	process.env.NODE_ENV === "production" ? githubPagesConfig : developmentConfig,
 )
