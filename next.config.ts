@@ -2,6 +2,7 @@ import { NextConfig } from "next"
 import createNextIntlPlugin from "next-intl/plugin"
 
 const baseConfig: Partial<NextConfig> = {
+	reactStrictMode: false,
 	images: {
 		remotePatterns: [
 			{

@@ -10,8 +10,9 @@ export const useFetch = <DataType, QueryParamsType>(
 		params?: QueryParamsType,
 		signal?: AbortSignal,
 	) => ApiResponse<DataType>,
-	{ params, options }: { params?: QueryParamsType; options?: FetchOptions },
+	hookParams: { params?: QueryParamsType; options?: FetchOptions } = {},
 ) => {
+	const { params, options } = hookParams
 	const [data, setData] = useState<DataType>()
 	const [error, setError] = useState<ErrorEntity>()
 	const [isLoading, setIsloading] = useState<boolean>(true)

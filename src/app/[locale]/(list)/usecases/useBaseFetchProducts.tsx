@@ -23,14 +23,14 @@ export const useBaseFetchProducts = (props?: {
 	)
 
 	useEffect(() => {
-		if (fetchResult.isLoadingRef.current) return
+		if (fetchResult.isLoading) return
 
-		if (fetchResult.dataRef.current && onFetch) {
-			onFetch(fetchResult.dataRef.current)
+		if (fetchResult.data && onFetch) {
+			onFetch(fetchResult.data)
 		}
-	}, [fetchResult.dataRef.current?.length, fetchResult.isLoadingRef.current])
+	}, [fetchResult.data?.length, fetchResult.isLoading])
 
-	if (fetchResult.errorRef.current) throw new Error(fetchResult.errorRef.current.message)
+	if (fetchResult.error) throw new Error(fetchResult.error.message)
 
 	return fetchResult
 }
