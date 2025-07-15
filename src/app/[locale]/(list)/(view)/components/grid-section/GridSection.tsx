@@ -1,11 +1,12 @@
 "use client"
 
 import { useContext } from "react"
+import { useLocale } from "use-intl"
 import { TelephoneListContext } from "@app/list/state/TelephoneListContext"
 import { useListTranslation } from "@app/list/intl/useListTranslations"
 import { ProductCard } from "@app/list/(view)/components/grid-section/product-card/ProductCard"
+import { Container } from "@/components"
 import styles from "./grid-section.module.css"
-import { useLocale } from "use-intl"
 
 export const GridSection = () => {
 	const { data } = useContext(TelephoneListContext)
@@ -13,17 +14,21 @@ export const GridSection = () => {
 	const locale = useLocale()
 
 	return (
-		<section className={styles["grid-section"]} aria-label={t("grid.label")}>
-			{data?.map((product, index) => (
-				<ProductCard
-					key={`${index}_${product.id}`}
-					description={product.brand}
-					imgUrl={product.imageUrl}
-					title={product.name}
-					price={product.basePrice}
-					url={`/${locale}/product?id=${product.id}`}
-				/>
-			))}
-		</section>
+		<Container>
+
+
+			<section className={styles["grid-section"]} aria-label={t("grid.label")}>
+				{data?.map((product, index) => (
+					<ProductCard
+						key={`${index}_${product.id}`}
+						description={product.brand}
+						imgUrl={product.imageUrl}
+						title={product.name}
+						price={product.basePrice}
+						url={`/${locale}/product?id=${product.id}`}
+					/>
+				))}
+			</section>
+		</Container>
 	)
 }

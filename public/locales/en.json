@@ -12,12 +12,20 @@
 			"label": "Smartphone results"
 		}
 	},
-	"detail": {},
+	"details": {
+		"price": "From {price} EUR",
+		"add": "Add",
+		"color": "Color. Pick your favourite.",
+		"storage": "Storage. How much space do you need?"
+	},
 	"components": {
 		"logo": "Logo",
 		"cart": {
 			"empty": "Shopping empty cart",
 			"items": "Shopping cart with {items} items"
+		},
+		"navbar": {
+			"return": "Back"
 		}
 	}
 }

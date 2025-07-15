@@ -9,8 +9,8 @@ nav.navbar {
 		margin: 0;
 		padding-top: 1.5rem;
 		padding-bottom: 1.5rem;
-		padding-left: 1rem;
-		padding-right: 1rem;
+		padding-left: 0;
+		padding-right: 0;
 
 		display: flex;
 		flex-direction: row;
@@ -24,22 +24,28 @@ nav.navbar {
 			color: var(--primary-text-color);
 		}
 	}
-}
 
-@media (min-width: 768px) {
-	nav.navbar {
-		ul {
-			padding-left: 1.5rem;
-			padding-right: 1.5rem;
-		}
-	}
-}
+	.return {
+		padding-top: 0.75rem;
+		padding-bottom: 0.75rem;
+		padding-right: 1ch;
 
-@media (min-width: 1024px) {
-	nav.navbar {
-		ul {
-			padding-left: 6.25rem;
-			padding-right: 6.25rem;
+		width: fit-content;
+
+		display: flex;
+		gap: 0.25rem;
+		align-items: center;
+
+		text-transform: uppercase;
+		text-decoration: none;
+		color: var(--primary-text-color);
+		font-weight: 300;
+		font-size: 0.75rem;
+
+		&:hover {
+			text-decoration: underline;
+
+			transition: text-decoration 0.2s ease-in-out;
 		}
 	}
 }

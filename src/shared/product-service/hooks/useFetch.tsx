@@ -23,8 +23,9 @@ export const useFetch = <DataType, QueryParamsType>(
 			} else if (!response.ok) {
 				setError(response.error)
 			}
+		}).finally(() => {
+			setIsloading(false)
 		})
-		setIsloading(false)
 	}
 
 	useEffect(() => {

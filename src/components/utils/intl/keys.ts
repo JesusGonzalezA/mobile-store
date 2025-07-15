@@ -1,1 +1,1 @@
-export type keys = "logo" | "cart.empty" | "cart.items"
+export type keys = "logo" | "cart.empty" | "cart.items" | "navbar.return"
