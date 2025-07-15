@@ -1,9 +1,9 @@
 import { useContext } from "react"
-import { TelephoneListContext } from "@app/list/state/TelephoneListContext"
+import { ProductListContext } from "@app/list/state/ProductListContext"
 import { useBaseFetchProducts } from "@app/list/usecases/useBaseFetchProducts"
 
 export const useQueryProducts = () => {
-	const { setData } = useContext(TelephoneListContext)
+	const { setData } = useContext(ProductListContext)
 
 	return useBaseFetchProducts({
 		options: { auto: false },

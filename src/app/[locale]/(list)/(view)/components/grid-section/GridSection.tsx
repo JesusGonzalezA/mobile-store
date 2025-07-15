@@ -2,14 +2,14 @@
 
 import { useContext } from "react"
 import { useLocale } from "use-intl"
-import { TelephoneListContext } from "@app/list/state/TelephoneListContext"
+import { ProductListContext } from "@app/list/state/ProductListContext"
 import { useListTranslation } from "@app/list/intl/useListTranslations"
 import { ProductCard } from "@app/list/(view)/components/grid-section/product-card/ProductCard"
 import { Container } from "@/components"
 import styles from "./grid-section.module.css"
 
 export const GridSection = () => {
-	const { data } = useContext(TelephoneListContext)
+	const { data } = useContext(ProductListContext)
 	const t = useListTranslation()
 	const locale = useLocale()
 

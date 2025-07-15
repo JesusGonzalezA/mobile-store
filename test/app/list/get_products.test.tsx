@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest"
 import { waitFor } from "@testing-library/dom"
 import container from "@/shared/di/container"
-import { TelephoneListWrapper } from "@app/list/(view)/page"
+import { ProductListWrapper } from "@app/list/(view)/ProductList"
 import { diModule } from "@app/list/di/module"
 import { errorProductListServiceModule } from "./mocks/di/errorProductListServiceModule"
 import { renderWithProviders } from "../../utils/renderWithProviders"
@@ -9,7 +9,7 @@ import { renderWithProviders } from "../../utils/renderWithProviders"
 describe("Getting products", () => {
 	it("should render a grid section with products", async () => {
 		const { queryByText, intl, queryByRole } = renderWithProviders(
-			<TelephoneListWrapper />,
+			<ProductListWrapper />,
 			{
 				locale: "en",
 			},
@@ -30,7 +30,7 @@ describe("Getting products", () => {
 			await container.load(errorProductListServiceModule)
 
 			const { queryByText, intl } = renderWithProviders(
-				<TelephoneListWrapper />,
+				<ProductListWrapper />,
 				{
 					locale: "en",
 				},
