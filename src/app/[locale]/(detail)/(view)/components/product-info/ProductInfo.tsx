@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Image from "next/image"
 import { ColorOption } from "@app/detail/domain/ColorOption"
 import { StorageOption } from "@app/detail/domain/StorageOption"
@@ -7,6 +7,7 @@ import { StorageRadioButton } from "./storage-radio-button/StorageRadioButton"
 import { ColorRadioButton } from "./color-radio-button/ColorRadioButton"
 import { Heading, P, Button } from "@/components"
 import styles from "./product-info.module.css"
+import { useEventBus } from "@/shared/services/event-bus/hooks/useEventBus"
 
 type ProductInfoProps = {
 	title: string
@@ -27,6 +28,11 @@ export const ProductInfo = ({
 	const [storage, setStorage] = useState<StorageOption>()
 	const [color, setColor] = useState<ColorOption>()
 	const isDisabled = !storage || !color
+	const eventBus = useEventBus()
+
+	const handleAdd = () => {
+		eventBus.publish("cart.items.new", {})
+	}
 
 	const handleColorChange = (value: string) => {
 		const selectedColor = colorOptions.find((option) => option.name === value)
@@ -60,7 +66,7 @@ export const ProductInfo = ({
 					<P className={styles.price}>{t("price", { price })}</P>
 				</div>
 
-				<form>
+				<div className={styles["selectors-wrapper"]}>
 					<div className={styles.selectors}>
 						<label>
 							{t("storage")}
@@ -98,10 +104,10 @@ export const ProductInfo = ({
 						</label>
 					</div>
 
-					<Button uppercase={true} disabled={isDisabled}>
+					<Button uppercase={true} disabled={isDisabled} onClick={handleAdd}>
 						{t("add")}
 					</Button>
-				</form>
+				</div>
 			</div>
 		</section>
 	)

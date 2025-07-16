@@ -1,6 +1,6 @@
 import { inject } from "inversify"
-import type { IHttpClient } from "@/shared/product-service/infra/HttpClient"
-import { DI_SYMBOLS } from "@/shared/di/types"
+import type { IHttpClient } from "@/shared/services/product-api-adapter/infra/HttpClient"
+import { DI_SYMBOLS } from "../di/types"
 
 export abstract class ProductService {
 	protected httpClient: IHttpClient

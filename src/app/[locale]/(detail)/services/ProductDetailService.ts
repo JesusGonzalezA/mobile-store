@@ -1,6 +1,6 @@
 import { injectFromBase } from "inversify"
-import { ApiResponse } from "@/shared/product-service/domain/ApiResponse"
-import { ProductService } from "@/shared/product-service/services/ProductService"
+import { ApiResponse } from "@/shared/services/product-api-adapter/domain/ApiResponse"
+import { ProductService } from "@/shared/services/product-api-adapter/services/ProductService"
 import { ProductEntity } from "@app/detail//domain/ProductEntity"
 import { GetProductParams } from "@app/detail/domain/GetProductParams"
 

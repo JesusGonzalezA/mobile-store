@@ -1,7 +1,7 @@
 import { inject } from "inversify"
-import { ApiResponse } from "@/shared/product-service/domain/ApiResponse"
-import type { IHttpService } from "@/shared/product-service/infra/HttpService"
-import { DI_SYMBOLS } from "@/shared/di/types"
+import { ApiResponse } from "@/shared/services/product-api-adapter/domain/ApiResponse"
+import type { IHttpService } from "@/shared/services/product-api-adapter/infra/HttpService"
+import { DI_SYMBOLS } from "@/shared/services/product-api-adapter/di/types"
 
 export interface IHttpClient {
 	baseUrl: string

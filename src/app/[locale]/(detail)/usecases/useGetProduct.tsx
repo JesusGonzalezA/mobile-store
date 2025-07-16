@@ -1,6 +1,6 @@
 import { useInjection } from "@/shared/di/hooks/useInjection"
 import { DI_SYMBOLS } from "@app/detail/di/types"
-import { useFetch } from "@/shared/product-service/hooks/useFetch"
+import { useFetch } from "@/shared/services/product-api-adapter/hooks/useFetch"
 import { IProductDetailService } from "@app/detail/services/ProductDetailService"
 import { GetProductParams } from "@app/detail/domain/GetProductParams"
 import { ProductEntity } from "@app/detail/domain/ProductEntity"

@@ -61,8 +61,11 @@ export const ProductCarousel = ({ products }: ProductCarouselProps) => {
 					onScroll={checkScrollability}
 				>
 					<ul className={styles.carousel__list}>
-						{products.map((product) => (
-							<li key={product.id} className={styles.carousel__item}>
+						{products.map((product, index) => (
+							<li
+								key={`${index}_${product.id}`}
+								className={styles.carousel__item}
+							>
 								<ProductCard
 									description={product.brand}
 									title={product.name}

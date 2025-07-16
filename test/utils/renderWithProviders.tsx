@@ -1,6 +1,6 @@
 import { NextIntlClientProvider } from "next-intl"
 import { render, RenderOptions } from "@testing-library/react"
-import { defaultLocale } from "@/shared/intl"
+import { defaultLocale } from "@/shared/services/intl"
 import esTranslations from "../../public/locales/es.json"
 import enTranslations from "../../public/locales/en.json"
 

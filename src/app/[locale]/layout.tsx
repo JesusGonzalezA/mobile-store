@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { setRequestLocale } from "next-intl/server"
 import { hasLocale, NextIntlClientProvider } from "next-intl"
-import { routing } from "@/shared/intl/routing"
+import { routing } from "@/shared/services/intl/routing"
 import "@/app/globals.css"
 import { Container } from "@/components"
 
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 }
 
 export function generateStaticParams() {
-	return routing.locales.map((locale) => ({ locale }))
+	return routing.locales.map((locale: string) => ({ locale }))
 }
 
 export default async function RootLayout({

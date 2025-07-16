@@ -40,7 +40,7 @@
 		}
 	}
 
-	form {
+	.selectors-wrapper {
 		display: inherit;
 		flex-direction: inherit;
 		gap: inherit;

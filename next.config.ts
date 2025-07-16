@@ -36,7 +36,9 @@ const githubPagesConfig: NextConfig = {
 	basePath: "/mobile-store",
 }
 
-const withNextIntl = createNextIntlPlugin("./src/shared/intl/request.ts")
+const withNextIntl = createNextIntlPlugin(
+	"./src/shared/services/intl/request.ts",
+)
 export default withNextIntl(
 	process.env.NODE_ENV === "production" ? githubPagesConfig : developmentConfig,
 )

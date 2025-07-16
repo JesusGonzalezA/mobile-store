@@ -3,17 +3,18 @@ import * as path from "path"
 import { describe, it, expect } from "vitest"
 
 describe("architecture", () => {
-	describe("product service", () => {
+	describe("product api adapter", () => {
 		it("should adhere to diagram", { timeout: 6000 }, async () => {
 			const diagramLocation = path.resolve(
 				"src",
 				"shared",
-				"product-service",
+				"services",
+				"product-api-adapter",
 				"architecture.puml",
 			)
 
 			const violations = await slicesOfProject()
-				.definedBy("src/shared/product-service/(**)/")
+				.definedBy("src/shared/services/product-api-adapter/(**)/")
 				.should()
 				.ignoringExternalDependencies()
 				.adhereToDiagramInFile(diagramLocation)
