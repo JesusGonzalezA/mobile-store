@@ -1,4 +1,5 @@
 section.grid-section {
+	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(20.5rem, 1fr));
 	flex-wrap: wrap;

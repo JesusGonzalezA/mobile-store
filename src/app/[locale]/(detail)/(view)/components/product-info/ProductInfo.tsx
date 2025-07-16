@@ -1,5 +1,7 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import Image from "next/image"
+import { CartStateContext } from "@/app/(state)/cart/CartStateContext"
+import { CartAction } from "@/app/(state)/cart/CartAction"
 import { ColorOption } from "@app/detail/domain/ColorOption"
 import { StorageOption } from "@app/detail/domain/StorageOption"
 import { useDetailTranslations } from "@app/detail/intl/useDetailTranslations"
@@ -11,8 +13,11 @@ import styles from "./product-info.module.css"
 type ProductInfoProps = {
 	title: string
 	basePrice: number
+	brand: string
 	storageOptions: StorageOption[]
 	colorOptions: ColorOption[]
+	id: string
+	name: string
 }
 
 export const ProductInfo = ({
@@ -20,13 +25,32 @@ export const ProductInfo = ({
 	basePrice,
 	storageOptions,
 	colorOptions,
+	brand,
+	name,
+	id,
 }: ProductInfoProps) => {
 	const t = useDetailTranslations()
+	const { dispatch } = useContext(CartStateContext)
 	const [price, setPrice] = useState<number>(basePrice)
 	const [imageUrl, setImageUrl] = useState<string>(colorOptions[0].imageUrl)
 	const [storage, setStorage] = useState<StorageOption>()
 	const [color, setColor] = useState<ColorOption>()
 	const isDisabled = !storage || !color
+
+	const handleAdd = () => {
+		dispatch({
+			type: CartAction.ADD,
+			payload: {
+				id,
+				imageUrl,
+				name,
+				brand,
+				basePrice: price,
+				capacity: storage ? storage.capacity : "",
+				color: color ? color.name : "",
+			},
+		})
+	}
 
 	const handleColorChange = (value: string) => {
 		const selectedColor = colorOptions.find((option) => option.name === value)
@@ -60,7 +84,7 @@ export const ProductInfo = ({
 					<P className={styles.price}>{t("price", { price })}</P>
 				</div>
 
-				<form>
+				<div className={styles["selectors-wrapper"]}>
 					<div className={styles.selectors}>
 						<label>
 							{t("storage")}
@@ -98,10 +122,10 @@ export const ProductInfo = ({
 						</label>
 					</div>
 
-					<Button uppercase={true} disabled={isDisabled}>
+					<Button uppercase fw disabled={isDisabled} onClick={handleAdd}>
 						{t("add")}
 					</Button>
-				</form>
+				</div>
 			</div>
 		</section>
 	)

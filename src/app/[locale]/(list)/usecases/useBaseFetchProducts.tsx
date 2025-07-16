@@ -1,7 +1,10 @@
 import { useEffect } from "react"
 import { useInjection } from "@/shared/di/hooks/useInjection"
 import { DI_SYMBOLS } from "@app/list/di/types"
-import { FetchOptions, useFetch } from "@/shared/product-service/hooks/useFetch"
+import {
+	FetchOptions,
+	useFetch,
+} from "@/shared/services/product-api-adapter/hooks/useFetch"
 import { IProductListService } from "@app/list/services/ProductListService"
 import { ProductListEntity } from "@app/list/domain/ProductListEntity"
 import { QueryProductsParams } from "@app/list/domain/QueryProductsParams"

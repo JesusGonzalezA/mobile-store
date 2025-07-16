@@ -1,13 +1,22 @@
 import { useComponentTranslations } from "@/components/utils/intl/useComponentTranslations"
 import styles from "./cart-icon.module.css"
 
-export const CartIconWrapper = () => {
+export const CartIconWrapper = ({ cartLength }: { cartLength: number }) => {
 	const t = useComponentTranslations()
 
 	return (
 		<div className={styles["cart-icon-wrapper"]}>
-			{" "}
-			<CartIcon name={t("cart.empty")} /> 0
+			{cartLength > 0 ? (
+				<div>
+					<CartIcon name={t("cart.items", { items: cartLength })} />
+					{cartLength}
+				</div>
+			) : (
+				<div>
+					<CartIcon name={t("cart.empty", { count: 0 })} />
+					{0}
+				</div>
+			)}
 		</div>
 	)
 }

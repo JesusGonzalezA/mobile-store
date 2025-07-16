@@ -1,8 +1,12 @@
 .button {
-	width: 100%;
+	width: fit-content;
+
 	padding: 1rem;
 	background-color: var(--primary-text-color);
 	color: var(--background-color);
+
+	padding-right: 5rem;
+	padding-left: 5rem;
 
 	&.uppercase {
 		text-transform: uppercase;
@@ -27,6 +31,15 @@
 	&:focus {
 		outline-offset: 5px;
 	}
+}
+
+.fw {
+	width: 100%;
+}
+
+.inverted {
+	background-color: var(--background-color);
+	color: var(--primary-text-color);
 }
 
 .ghostButton {

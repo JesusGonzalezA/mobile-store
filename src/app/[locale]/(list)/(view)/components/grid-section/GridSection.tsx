@@ -5,7 +5,6 @@ import { useLocale } from "use-intl"
 import { ProductListContext } from "@app/list/state/ProductListContext"
 import { useListTranslation } from "@app/list/intl/useListTranslations"
 import { ProductCard } from "@/components/organisms/product-card/ProductCard"
-import { Container } from "@/components"
 import styles from "./grid-section.module.css"
 
 export const GridSection = () => {
@@ -14,19 +13,17 @@ export const GridSection = () => {
 	const locale = useLocale()
 
 	return (
-		<Container>
-			<section className={styles["grid-section"]} aria-label={t("grid.label")}>
-				{data?.map((product, index) => (
-					<ProductCard
-						key={`${index}_${product.id}`}
-						description={product.brand}
-						imgUrl={product.imageUrl}
-						title={product.name}
-						price={product.basePrice}
-						url={`/${locale}/product?id=${product.id}`}
-					/>
-				))}
-			</section>
-		</Container>
+		<section className={styles["grid-section"]} aria-label={t("grid.label")}>
+			{data?.map((product, index) => (
+				<ProductCard
+					key={`${index}_${product.id}`}
+					description={product.brand}
+					imgUrl={product.imageUrl}
+					title={product.name}
+					price={product.basePrice}
+					url={`/${locale}/product?id=${product.id}`}
+				/>
+			))}
+		</section>
 	)
 }
