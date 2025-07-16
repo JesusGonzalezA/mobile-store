@@ -21,6 +21,8 @@
 - Lazy load para las imágenes
 - Implementación de un event bus con RXJS para permittir la comunicación entre funcionalidades, evitando acoplamiento
 - Uso de ErrorBoundary customizado para gestionar errores
+- Deploy en ghpages
+- Uso de nextjs y SSR
 
 - Tests de architectura con ts-arch
 - Tests de accesibilidad con axe-core
@@ -37,6 +39,7 @@
 - Suspense
 - ViewTransitions
 - Desacoplar carrito del estado global
+- Mejor SSR (había utilizado NextJS de una forma muy básica en el pasado). Quizás podríamos renderizar en servidor algunas páginas si supiéramos los id que hay en base de datos (o los más llamados)
   ...
 
 ## Instalación
