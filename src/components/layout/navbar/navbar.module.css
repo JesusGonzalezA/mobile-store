@@ -30,6 +30,8 @@ nav.navbar {
 		padding-bottom: 0.75rem;
 		padding-right: 1ch;
 
+		cursor: pointer;
+
 		width: fit-content;
 
 		& > div {

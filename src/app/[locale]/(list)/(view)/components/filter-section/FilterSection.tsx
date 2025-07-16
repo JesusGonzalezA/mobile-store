@@ -3,7 +3,7 @@ import { useDebouncedCallback } from "use-debounce"
 import { useListTranslation } from "@app/list/intl/useListTranslations"
 import { useQueryProducts } from "@app/list/usecases/useQueryProducts"
 import { ProductListContext } from "@app/list/state/ProductListContext"
-import { SearchInput, P, Container } from "@/components"
+import { SearchInput, P } from "@/components"
 import styles from "./filter-section.module.css"
 
 export const FilterSection = () => {
@@ -21,7 +21,6 @@ export const FilterSection = () => {
 	}, 300)
 
 	return (
-		<Container>
 			<div className={styles.search}>
 				<SearchInput
 					name="search"
@@ -33,6 +32,5 @@ export const FilterSection = () => {
 					{t("search.results", { count: data.length })}
 				</P>
 			</div>
-		</Container>
 	)
 }

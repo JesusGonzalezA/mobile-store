@@ -5,7 +5,6 @@ import { useLocale } from "use-intl"
 import { ProductListContext } from "@app/list/state/ProductListContext"
 import { useListTranslation } from "@app/list/intl/useListTranslations"
 import { ProductCard } from "@/components/organisms/product-card/ProductCard"
-import { Container } from "@/components"
 import styles from "./grid-section.module.css"
 
 export const GridSection = () => {
@@ -14,7 +13,6 @@ export const GridSection = () => {
 	const locale = useLocale()
 
 	return (
-		<Container>
 			<section className={styles["grid-section"]} aria-label={t("grid.label")}>
 				{data?.map((product, index) => (
 					<ProductCard
@@ -27,6 +25,5 @@ export const GridSection = () => {
 					/>
 				))}
 			</section>
-		</Container>
 	)
 }

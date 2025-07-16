@@ -1,22 +1,13 @@
 "use client"
 
 import React from "react"
-import { Header, Main, Footer } from "@/components"
-import { AppNavBar } from "@/components/organisms/navbar/AppNavBar"
 import { ProductListWrapper } from "@app/list/(view)/ProductList"
+import { useBackLink } from "../../(state)/useBackLink"
 
 const Page = () => {
-	return (
-		<React.Fragment>
-			<Header>
-				<AppNavBar hasReturn={false} />
-			</Header>
-			<Main>
-				<ProductListWrapper />
-			</Main>
-			<Footer></Footer>
-		</React.Fragment>
-	)
+	useBackLink(false)
+
+	return <ProductListWrapper />
 }
 
 export default Page

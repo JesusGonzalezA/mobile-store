@@ -7,4 +7,6 @@
 
   infra --> domain
   infra --> di
+
+  di --> infra
 @enduml

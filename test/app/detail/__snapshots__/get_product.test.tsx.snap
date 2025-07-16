@@ -5,195 +5,195 @@ exports[`Getting product > should render a detailed view of the product 1`] = `
   <div
     class="_container_439e06"
   >
-    <div>
-      <section
-        class="_section__flex_space-between_ac1ec7"
+    <section
+      class="_section__flex_space-between_ac1ec7"
+    >
+      <div
+        class="_image-container_ac1ec7"
+      >
+        <img
+          alt=""
+          data-nimg="1"
+          decoding="async"
+          height="256"
+          loading="lazy"
+          src="/_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FSMG-S24U-titanium-violet.webp&w=640&q=75"
+          srcset="/_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FSMG-S24U-titanium-violet.webp&w=384&q=75 1x, /_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FSMG-S24U-titanium-violet.webp&w=640&q=75 2x"
+          style="color: transparent;"
+          width="312"
+        />
+      </div>
+      <div
+        class="_form_ac1ec7"
       >
         <div
-          class="_image-container_ac1ec7"
+          class="_title-wrapper_ac1ec7"
         >
-          <img
-            alt=""
-            data-nimg="1"
-            decoding="async"
-            height="256"
-            loading="lazy"
-            src="/_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FSMG-S24U-titanium-violet.webp&w=640&q=75"
-            srcset="/_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FSMG-S24U-titanium-violet.webp&w=384&q=75 1x, /_next/image?url=http%3A%2F%2Fprueba-tecnica-api-tienda-moviles.onrender.com%2Fimages%2FSMG-S24U-titanium-violet.webp&w=640&q=75 2x"
-            style="color: transparent;"
-            width="312"
-          />
+          <h2
+            class="_heading_839e02 _title_ac1ec7"
+          >
+            Galaxy S24 Ultra
+          </h2>
+          <p
+            class="_p_c7a6d3 _price_ac1ec7"
+          >
+            From 1329 EUR
+          </p>
         </div>
         <div
-          class="_form_ac1ec7"
+          class="_selectors-wrapper_ac1ec7"
         >
           <div
-            class="_title-wrapper_ac1ec7"
+            class="_selectors_ac1ec7"
           >
-            <h2
-              class="_heading_839e02 _title_ac1ec7"
-            >
-              Galaxy S24 Ultra
-            </h2>
-            <p
-              class="_p_c7a6d3 _price_ac1ec7"
-            >
-              From 1329 EUR
-            </p>
+            <label>
+              Storage. How much space do you need?
+              <div
+                class="_options_ac1ec7"
+              >
+                <div
+                  class="_wrapper_4ebab1"
+                >
+                  <input
+                    class="_input_4ebab1"
+                    id="«r0»"
+                    name="capacity"
+                    type="radio"
+                    value="256 GB"
+                  />
+                  <label
+                    class="_label_4ebab1 "
+                    for="«r0»"
+                  >
+                    256 GB
+                  </label>
+                </div>
+                <div
+                  class="_wrapper_4ebab1"
+                >
+                  <input
+                    class="_input_4ebab1"
+                    id="«r1»"
+                    name="capacity"
+                    type="radio"
+                    value="512 GB"
+                  />
+                  <label
+                    class="_label_4ebab1 "
+                    for="«r1»"
+                  >
+                    512 GB
+                  </label>
+                </div>
+                <div
+                  class="_wrapper_4ebab1"
+                >
+                  <input
+                    class="_input_4ebab1"
+                    id="«r2»"
+                    name="capacity"
+                    type="radio"
+                    value="1 TB"
+                  />
+                  <label
+                    class="_label_4ebab1 "
+                    for="«r2»"
+                  >
+                    1 TB
+                  </label>
+                </div>
+              </div>
+            </label>
+            <label>
+              Color. Pick your favourite.
+              <div
+                class="_options_ac1ec7"
+                style="gap: 1rem;"
+              >
+                <div
+                  class="_wrapper_b44dbe "
+                  style="background: rgb(142, 111, 150);"
+                >
+                  <label
+                    class="_visually-hidden_cbe165"
+                    for="«r3»"
+                  >
+                    Titanium Violet
+                  </label>
+                  <input
+                    class="_input_b44dbe"
+                    id="«r3»"
+                    name="color"
+                    type="radio"
+                    value="Titanium Violet"
+                  />
+                </div>
+                <div
+                  class="_wrapper_b44dbe "
+                  style="background: rgb(0, 0, 0);"
+                >
+                  <label
+                    class="_visually-hidden_cbe165"
+                    for="«r4»"
+                  >
+                    Titanium Black
+                  </label>
+                  <input
+                    class="_input_b44dbe"
+                    id="«r4»"
+                    name="color"
+                    type="radio"
+                    value="Titanium Black"
+                  />
+                </div>
+                <div
+                  class="_wrapper_b44dbe "
+                  style="background: rgb(128, 128, 128);"
+                >
+                  <label
+                    class="_visually-hidden_cbe165"
+                    for="«r5»"
+                  >
+                    Titanium Gray
+                  </label>
+                  <input
+                    class="_input_b44dbe"
+                    id="«r5»"
+                    name="color"
+                    type="radio"
+                    value="Titanium Gray"
+                  />
+                </div>
+                <div
+                  class="_wrapper_b44dbe "
+                  style="background: rgb(255, 255, 0);"
+                >
+                  <label
+                    class="_visually-hidden_cbe165"
+                    for="«r6»"
+                  >
+                    Titanium Yellow
+                  </label>
+                  <input
+                    class="_input_b44dbe"
+                    id="«r6»"
+                    name="color"
+                    type="radio"
+                    value="Titanium Yellow"
+                  />
+                </div>
+              </div>
+            </label>
           </div>
-          <form>
-            <div
-              class="_selectors_ac1ec7"
-            >
-              <label>
-                Storage. How much space do you need?
-                <div
-                  class="_options_ac1ec7"
-                >
-                  <div
-                    class="_wrapper_4ebab1"
-                  >
-                    <input
-                      class="_input_4ebab1"
-                      id="«r0»"
-                      name="capacity"
-                      type="radio"
-                      value="256 GB"
-                    />
-                    <label
-                      class="_label_4ebab1 "
-                      for="«r0»"
-                    >
-                      256 GB
-                    </label>
-                  </div>
-                  <div
-                    class="_wrapper_4ebab1"
-                  >
-                    <input
-                      class="_input_4ebab1"
-                      id="«r1»"
-                      name="capacity"
-                      type="radio"
-                      value="512 GB"
-                    />
-                    <label
-                      class="_label_4ebab1 "
-                      for="«r1»"
-                    >
-                      512 GB
-                    </label>
-                  </div>
-                  <div
-                    class="_wrapper_4ebab1"
-                  >
-                    <input
-                      class="_input_4ebab1"
-                      id="«r2»"
-                      name="capacity"
-                      type="radio"
-                      value="1 TB"
-                    />
-                    <label
-                      class="_label_4ebab1 "
-                      for="«r2»"
-                    >
-                      1 TB
-                    </label>
-                  </div>
-                </div>
-              </label>
-              <label>
-                Color. Pick your favourite.
-                <div
-                  class="_options_ac1ec7"
-                  style="gap: 1rem;"
-                >
-                  <div
-                    class="_wrapper_b44dbe "
-                    style="background: rgb(142, 111, 150);"
-                  >
-                    <label
-                      class="_visually-hidden_cbe165"
-                      for="«r3»"
-                    >
-                      Titanium Violet
-                    </label>
-                    <input
-                      class="_input_b44dbe"
-                      id="«r3»"
-                      name="color"
-                      type="radio"
-                      value="Titanium Violet"
-                    />
-                  </div>
-                  <div
-                    class="_wrapper_b44dbe "
-                    style="background: rgb(0, 0, 0);"
-                  >
-                    <label
-                      class="_visually-hidden_cbe165"
-                      for="«r4»"
-                    >
-                      Titanium Black
-                    </label>
-                    <input
-                      class="_input_b44dbe"
-                      id="«r4»"
-                      name="color"
-                      type="radio"
-                      value="Titanium Black"
-                    />
-                  </div>
-                  <div
-                    class="_wrapper_b44dbe "
-                    style="background: rgb(128, 128, 128);"
-                  >
-                    <label
-                      class="_visually-hidden_cbe165"
-                      for="«r5»"
-                    >
-                      Titanium Gray
-                    </label>
-                    <input
-                      class="_input_b44dbe"
-                      id="«r5»"
-                      name="color"
-                      type="radio"
-                      value="Titanium Gray"
-                    />
-                  </div>
-                  <div
-                    class="_wrapper_b44dbe "
-                    style="background: rgb(255, 255, 0);"
-                  >
-                    <label
-                      class="_visually-hidden_cbe165"
-                      for="«r6»"
-                    >
-                      Titanium Yellow
-                    </label>
-                    <input
-                      class="_input_b44dbe"
-                      id="«r6»"
-                      name="color"
-                      type="radio"
-                      value="Titanium Yellow"
-                    />
-                  </div>
-                </div>
-              </label>
-            </div>
-            <button
-              class="_button_5232f3 _uppercase_5232f3 "
-              disabled=""
-            >
-              Add
-            </button>
-          </form>
+          <button
+            class="_button_5232f3 _uppercase_5232f3 "
+            disabled=""
+          >
+            Add
+          </button>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
     <div>
       <h2
         class="_heading_839e02 _title_ac7617"

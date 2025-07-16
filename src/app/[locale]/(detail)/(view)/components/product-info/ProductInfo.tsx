@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import Image from "next/image"
 import { ColorOption } from "@app/detail/domain/ColorOption"
 import { StorageOption } from "@app/detail/domain/StorageOption"
@@ -6,8 +6,8 @@ import { useDetailTranslations } from "@app/detail/intl/useDetailTranslations"
 import { StorageRadioButton } from "./storage-radio-button/StorageRadioButton"
 import { ColorRadioButton } from "./color-radio-button/ColorRadioButton"
 import { Heading, P, Button } from "@/components"
-import styles from "./product-info.module.css"
 import { useEventBus } from "@/shared/services/event-bus/hooks/useEventBus"
+import styles from "./product-info.module.css"
 
 type ProductInfoProps = {
 	title: string
