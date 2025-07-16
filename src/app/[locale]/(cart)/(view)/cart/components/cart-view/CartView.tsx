@@ -4,9 +4,12 @@ import { CartStateContext } from "@/app/(state)/cart/CartStateContext"
 import { Button, Container, Heading, P } from "@/components"
 import styles from "./cart-view.module.css"
 import { CartProduct } from "../cart-product/CartProduct"
+import Link from "next/link"
+import { useLocale } from "next-intl"
 
 export const CartView = () => {
 	const t = useCartTranslations()
+	const locale = useLocale()
 	const { state } = useContext(CartStateContext)
 
 	return (
@@ -21,8 +24,16 @@ export const CartView = () => {
 			<Container className={styles.cart__view__cta__container}>
 				<div className={styles.cart__view__cta_float}>
 					<div className={styles.cart__view__continue_fw}>
-						<Button inverted uppercase fw>
-							{t("continue")}
+						<Button inverted uppercase fw role="none">
+							<Link
+								href={`/${locale}`}
+								style={{
+									color: "var(--primary-text-color",
+									textDecoration: "none",
+								}}
+							>
+								{t("continue")}
+							</Link>
 						</Button>
 					</div>
 
