@@ -79,19 +79,19 @@ npm run lint:fix
 - Tests de architectura con ts-arch
   - Compruebo que las funcionalidades (list, cart, detail) son independientes entre sí. En caso de haber una referencia inválida, ésta será detectada en los tests como se muestra en la siguiente imagen.
     [modules-independency.test.ts](./test/architecture/modules-independency.test.ts)
-    ![Error de arquitectura debido a un módulo llamando a otro detectada en los tests](./docs/arch_error_feature_interdependency.png width=250)
+    ![Error de arquitectura debido a un módulo llamando a otro detectada en los tests](./docs/arch_error_feature_interdependency.png)
 
   - Compruebo que cada funcionalidad o utilidad de la aplicación sigue una arquitectura correcta. Cada módulo independiente puede definir su arquitectura en un archivo .puml, donde se pueden definir las relaciones entre sus componentes. Si las relaciones son violadas, puedo detectarlo en los tests. El reporte será el de la imagen de abajo, ya que no puedo tener una referencia desde infra a services.
     El archivo de test:
     [product-api-adapter.test.ts](./test/architecture/product-api-adapter.test.ts)
     El archivo de arquitectura: [architecture.puml](./src/shared/services/product-api-adapter/architecture.puml)
-    ![Error de arquitectura debido a una dependencia de infra a services detectada en los tests](./docs/arch_error_feature.png width=250)
+    ![Error de arquitectura debido a una dependencia de infra a services detectada en los tests](./docs/arch_error_feature.png)
     Cabe destacar que usar puml nos facilita también documentar, ya que hay utilidades para crear png a partir de estos archivos, como [https://plantuml.com/es/](https://plantuml.com/es/)
 
 - Tests de accesibilidad con axe-core
 - Tests muy reales y basados en escenarios con MSW para mockear respuestas del servidor
 - Tests de tolerancia a fallos utilizando MSW para parar el servidor. Por ejemplo, en el siguiente test pruebo que cuando paro el servidor y hago un filtrado se muestre el error boundary.
-  ![Test usando server.close() para cerrar el servidor. Se comprueba que se encuentra el mensaje de error en la pantalla.](./docs/test_server_down.png width=250)
+  ![Test usando server.close() para cerrar el servidor. Se comprueba que se encuentra el mensaje de error en la pantalla.](./docs/test_server_down.png)
 
 ## Podríamos seguir trabajando en ...
 
@@ -129,19 +129,19 @@ Además, en caso de que se necesiten comunicar, he añadido una implementación 
 ## Depurando un caso de uso: Obtener un producto
 
 1. (app/detail/view) El componente inicia el use case
-   ![ProductDetail llama al usecase, definido como hook](./docs/get-product/1_ProductDetail.png width=250)
+   ![ProductDetail llama al usecase, definido como hook](./docs/get-product/1_ProductDetail.png)
 
 1. (app/detail/usecase) El use case: - Carga el servicio a utilizar desde el contenedor de inyección de dependencias - Usa un hook para llamar a este servicio, que gestiona los errores, la carga de datos y el estado ocupado.
-   ![useGetProduct coge el servicio con useInjection y llama al servicio con useFetch](./docs/get-product/2_useGetProduct.png width=250)
+   ![useGetProduct coge el servicio con useInjection y llama al servicio con useFetch](./docs/get-product/2_useGetProduct.png)
 
 1. (shared/services/product-api-adapter/hooks) El hook useFetch llama al servicio y gestiona error, datos y loading
-   ![useFetch](./docs/get-product/3.useFetch.png width=250)
+   ![useFetch](./docs/get-product/3.useFetch.png)
 
 1. (app/detail/services/ProductDetailService) El servicio que había sido llamado por useFetch es finalmente llamado. Este especifica como conectarse a la API (método, URI, parámetros...). Hereda de ProductService, que añadirá la cabecera x-api-key para autenticarse. Así, si cambiamos el método de autenticación, sólo haremos un cambio en un archivo.
-   ![Servicio llama a httpclient](./docs/get-product/4.ProductDetailService.png width=250)
+   ![Servicio llama a httpclient](./docs/get-product/4.ProductDetailService.png)
 
 1. (shared/services/product-api-adapter/services/HttpClient) El servicio HttpClient delega a un servicio de infraestructura (HttpService) la ejecución real de la petición.
-   ![HttpClient llama a HttpService](./docs/get-product/5.HttpClient.png width=250)
+   ![HttpClient llama a HttpService](./docs/get-product/5.HttpClient.png)
 
 1. (shared/services/product-api-adapter/infra/HttpService) El servicio de infraestructura HttpService acaba haciendo la petición gracias a fetch. Gestiona los errores y el resultado. Si quisieramos usar axios o otro método sobre fetch, sólo debemos de cambiarlo en un sitio.
-   ![HttpService hace la petición con fetch](./docs/get-product/6.HttpService.png.png width=250)
+   ![HttpService hace la petición con fetch](./docs/get-product/6.HttpService.png.png)
