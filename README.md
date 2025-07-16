@@ -146,4 +146,4 @@ Además, en caso de que se necesiten comunicar, he añadido una implementación 
    ![HttpClient llama a HttpService](./docs/get-product/5.HttpClient.png)
 
 1. (shared/services/product-api-adapter/infra/HttpService) El servicio de infraestructura HttpService acaba haciendo la petición gracias a fetch. Gestiona los errores y el resultado. Si quisieramos usar axios o otro método sobre fetch, sólo debemos de cambiarlo en un sitio.
-   ![HttpService hace la petición con fetch](./docs/get-product/6.HttpService.png.png)
+   ![HttpService hace la petición con fetch](./docs/get-product/6.HttpService.png)
