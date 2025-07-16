@@ -24,17 +24,12 @@ export const CartView = () => {
 			<Container className={styles.cart__view__cta__container}>
 				<div className={styles.cart__view__cta_float}>
 					<div className={styles.cart__view__continue_fw}>
-						<Button inverted uppercase fw role="none">
-							<Link
-								href={`/${locale}`}
-								style={{
-									color: "var(--primary-text-color",
-									textDecoration: "none",
-								}}
-							>
-								{t("continue")}
-							</Link>
-						</Button>
+                        <Link
+                            href={`/${locale}`}
+                            className={styles.cart__view_continue__button}
+                        >
+                            {t("continue")}
+                        </Link>
 					</div>
 
 					{state.length > 0 && (

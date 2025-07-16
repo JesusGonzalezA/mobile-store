@@ -46,6 +46,30 @@
 	width: 100%;
 }
 
+.cart__view_continue__button {
+	color: var(--primary-text-color);
+	background-color: var(--background-color);
+	border: 1px solid var(--primary-text-color);
+	display: block;
+	text-decoration: none;
+	width: fit-content;
+
+	padding: 1rem;
+
+	padding-right: 5rem;
+	padding-left: 5rem;
+
+	text-transform: uppercase;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	&:focus {
+		outline-offset: 5px;
+	}
+}
+
 @media (min-width: 768px) {
 	.cart__view__continue_fw {
 		width: 30%;
