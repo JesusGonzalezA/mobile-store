@@ -14,16 +14,19 @@ export const GridSection = () => {
 
 	return (
 		<section className={styles["grid-section"]} aria-label={t("grid.label")}>
-			{data?.map((product, index) => (
-				<ProductCard
-					key={`${index}_${product.id}`}
-					description={product.brand}
-					imgUrl={product.imageUrl}
-					title={product.name}
-					price={product.basePrice}
-					url={`/${locale}/product?id=${product.id}`}
-				/>
-			))}
+			<ul className={styles.grid}>
+				{data?.map((product, index) => (
+					<li key={`${index}_${product.id}`}>
+						<ProductCard
+							description={product.brand}
+							imgUrl={product.imageUrl}
+							title={product.name}
+							price={product.basePrice}
+							url={`/${locale}/product?id=${product.id}`}
+						/>
+					</li>
+				))}
+			</ul>
 		</section>
 	)
 }

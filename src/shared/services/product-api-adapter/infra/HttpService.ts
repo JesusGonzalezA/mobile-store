@@ -33,7 +33,7 @@ export class HttpService implements IHttpService {
 					value: undefined,
 				}
 			}
-			console.log(error)
+
 			return {
 				ok: false,
 				error: error as ErrorEntity,

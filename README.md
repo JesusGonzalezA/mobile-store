@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mobile store
 
-## Getting Started
+## Rutas
 
-First, run the development server:
+/en
+/cart
+/product?id=
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+/es
+/cart
+/product?id=
+
+## Funcionalidades a destacar
+
+- Localización con intl
+  - Uso de módulos para mejorar escalabilidad horizontal
+- Inyección de dependencias con inversify
+  - Uso de módulos para mejorar escalabilidad horizontal
+- Uso de estado con context y patrón reducer
+- Llamadas a API con tokens de cancelación y debounce para optimizar datos compartidos y evitar sobrecargas en el servidor
+- Lazy load para las imágenes
+- Implementación de un event bus con RXJS para permittir la comunicación entre funcionalidades, evitando acoplamiento
+- Uso de ErrorBoundary customizado para gestionar errores
+
+- Tests de architectura con ts-arch
+- Tests de accesibilidad con axe-core
+- Tests muy reales y basados en escenarios con MSW para mockear respuestas del servidor
+- Tests de tolerancia a fallos utilizando MSW para parar el servidor
+
+## Podríamos seguir trabajando en
+
+- Crear un logger y usarlo en HttpService cuando hay un error en el servidor. Así podríamos gestionarlos conectándonos a un servicio y permitir cambiarlo fácilmente
+- Estilos
+- Mayor abstracción de componentes
+- Accesibilidad
+- Error boundary más pequeños
+- Suspense
+- ViewTransitions
+- Desacoplar carrito del estado global
+  ...
+
+## Instalación
+
+```sh
+npm ci
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Ejecutar en local
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Necesitarás configurar las variables de entorno. Son del tipo:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```json
+NEXT_PUBLIC_API_URL=https://your-api-url.com
+NEXT_PUBLIC_API_KEY=your-api-key-here
+NEXT_PUBLIC_SEARCH_LIMIT=20
+```
 
-## Learn More
+Crea un archivo llamado .env.local en la carpeta root del proyecto con las mismas.
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tests
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```sh
+npm run test
+```
 
-## Deploy on Vercel
+También puedes ejecutarlos en modo watch con la UI de vitest
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```sh
+npm run test:watch
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Formateo de archivos con prettier
+
+```sh
+npm run format:check
+npm run format:fix
+```
+
+## Lintando archivos con eslint
+
+```sh
+npm run lint:check
+npm run lint:fix
+```

@@ -11,7 +11,7 @@
 		"format:check": "prettier --check .",
 		"format:fix": "prettier --write .",
 		"test": "vitest run --passWithNoTests",
-		"test:watch": "vitest --watch"
+		"test:watch": "vitest --watch --ui"
 	},
 	"dependencies": {
 		"next": "15.3.5",

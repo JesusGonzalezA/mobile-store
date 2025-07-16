@@ -18,18 +18,24 @@ export const CartView = () => {
 				{t("count", { count: state.length })}
 			</Heading>
 
-			{state.map((item, index) => {
-				return <CartProduct key={`${index}_${item.id}`} product={item} />
-			})}
+			<ul>
+				{state.map((item, index) => {
+					return (
+						<li key={`${index}_${item.id}`}>
+							<CartProduct product={item} />
+						</li>
+					)
+				})}
+			</ul>
 			<Container className={styles.cart__view__cta__container}>
 				<div className={styles.cart__view__cta_float}>
 					<div className={styles.cart__view__continue_fw}>
-                        <Link
-                            href={`/${locale}`}
-                            className={styles.cart__view_continue__button}
-                        >
-                            {t("continue")}
-                        </Link>
+						<Link
+							href={`/${locale}`}
+							className={styles.cart__view_continue__button}
+						>
+							{t("continue")}
+						</Link>
 					</div>
 
 					{state.length > 0 && (

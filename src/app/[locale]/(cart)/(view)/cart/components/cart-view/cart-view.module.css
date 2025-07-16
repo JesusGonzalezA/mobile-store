@@ -3,6 +3,14 @@
 
 	display: flex;
 	flex-direction: column;
+
+	ul {
+		padding-left: 0;
+
+		li {
+			list-style: none;
+		}
+	}
 }
 
 .cart__view__title {
