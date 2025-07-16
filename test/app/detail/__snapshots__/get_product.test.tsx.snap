@@ -30,7 +30,7 @@ exports[`Getting product > should render a detailed view of the product 1`] = `
           class="_title-wrapper_ac1ec7"
         >
           <h2
-            class="_heading_839e02 _title_ac1ec7"
+            class="_heading_839e02  _title_ac1ec7"
           >
             Galaxy S24 Ultra
           </h2>
@@ -186,7 +186,7 @@ exports[`Getting product > should render a detailed view of the product 1`] = `
             </label>
           </div>
           <button
-            class="_button_5232f3 _uppercase_5232f3 "
+            class="_button_5232f3 _uppercase_5232f3  _fw_5232f3 "
             disabled=""
           >
             Add
@@ -196,7 +196,7 @@ exports[`Getting product > should render a detailed view of the product 1`] = `
     </section>
     <div>
       <h2
-        class="_heading_839e02 _title_ac7617"
+        class="_heading_839e02  _title_ac7617"
       >
         Specifications
       </h2>
@@ -329,7 +329,7 @@ exports[`Getting product > should render a detailed view of the product 1`] = `
     </div>
     <div>
       <h2
-        class="_heading_839e02 _title_1a3fa9"
+        class="_heading_839e02  _title_1a3fa9"
       >
         Similar products
       </h2>
@@ -341,7 +341,7 @@ exports[`Getting product > should render a detailed view of the product 1`] = `
         >
           <button
             aria-label="Previous products"
-            class="_button_5232f3  _carousel__button_1a3fa9 _carousel__button_left_1a3fa9"
+            class="_button_5232f3    _carousel__button_1a3fa9 _carousel__button_left_1a3fa9"
             disabled=""
           >
             <span
@@ -352,7 +352,7 @@ exports[`Getting product > should render a detailed view of the product 1`] = `
           </button>
           <button
             aria-label="Next products"
-            class="_button_5232f3  _carousel__button_1a3fa9 _carousel__button_right_1a3fa9"
+            class="_button_5232f3    _carousel__button_1a3fa9 _carousel__button_right_1a3fa9"
           >
             <span
               aria-hidden="true"
@@ -384,7 +384,7 @@ exports[`Getting product > should render a detailed view of the product 1`] = `
                       class="_around_703bff"
                     >
                       <h2
-                        class="_heading_839e02 _title_703bff"
+                        class="_heading_839e02  _title_703bff"
                       >
                         Note 50
                       </h2>
@@ -441,7 +441,7 @@ exports[`Getting product > should render a detailed view of the product 1`] = `
                       class="_around_703bff"
                     >
                       <h2
-                        class="_heading_839e02 _title_703bff"
+                        class="_heading_839e02  _title_703bff"
                       >
                         A18
                       </h2>
@@ -498,7 +498,7 @@ exports[`Getting product > should render a detailed view of the product 1`] = `
                       class="_around_703bff"
                     >
                       <h2
-                        class="_heading_839e02 _title_703bff"
+                        class="_heading_839e02  _title_703bff"
                       >
                         13T Pro
                       </h2>
@@ -555,7 +555,7 @@ exports[`Getting product > should render a detailed view of the product 1`] = `
                       class="_around_703bff"
                     >
                       <h2
-                        class="_heading_839e02 _title_703bff"
+                        class="_heading_839e02  _title_703bff"
                       >
                         Galaxy A05s
                       </h2>
@@ -612,7 +612,7 @@ exports[`Getting product > should render a detailed view of the product 1`] = `
                       class="_around_703bff"
                     >
                       <h2
-                        class="_heading_839e02 _title_703bff"
+                        class="_heading_839e02  _title_703bff"
                       >
                         A60
                       </h2>
@@ -669,7 +669,7 @@ exports[`Getting product > should render a detailed view of the product 1`] = `
                       class="_around_703bff"
                     >
                       <h2
-                        class="_heading_839e02 _title_703bff"
+                        class="_heading_839e02  _title_703bff"
                       >
                         iPhone 13
                       </h2>

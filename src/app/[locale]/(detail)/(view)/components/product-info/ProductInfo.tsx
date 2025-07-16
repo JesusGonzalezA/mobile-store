@@ -1,19 +1,23 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import Image from "next/image"
+import { CartStateContext } from "@/app/(state)/cart/CartStateContext"
+import { CartAction } from "@/app/(state)/cart/CartAction"
 import { ColorOption } from "@app/detail/domain/ColorOption"
 import { StorageOption } from "@app/detail/domain/StorageOption"
 import { useDetailTranslations } from "@app/detail/intl/useDetailTranslations"
 import { StorageRadioButton } from "./storage-radio-button/StorageRadioButton"
 import { ColorRadioButton } from "./color-radio-button/ColorRadioButton"
 import { Heading, P, Button } from "@/components"
-import { useEventBus } from "@/shared/services/event-bus/hooks/useEventBus"
 import styles from "./product-info.module.css"
 
 type ProductInfoProps = {
 	title: string
 	basePrice: number
+	brand: string
 	storageOptions: StorageOption[]
 	colorOptions: ColorOption[]
+	id: string
+	name: string
 }
 
 export const ProductInfo = ({
@@ -21,17 +25,31 @@ export const ProductInfo = ({
 	basePrice,
 	storageOptions,
 	colorOptions,
+	brand,
+	name,
+	id,
 }: ProductInfoProps) => {
 	const t = useDetailTranslations()
+	const { dispatch } = useContext(CartStateContext)
 	const [price, setPrice] = useState<number>(basePrice)
 	const [imageUrl, setImageUrl] = useState<string>(colorOptions[0].imageUrl)
 	const [storage, setStorage] = useState<StorageOption>()
 	const [color, setColor] = useState<ColorOption>()
 	const isDisabled = !storage || !color
-	const eventBus = useEventBus()
 
 	const handleAdd = () => {
-		eventBus.publish("cart.items.new", {})
+		dispatch({
+			type: CartAction.ADD,
+			payload: {
+				id,
+				imageUrl,
+				name,
+				brand,
+				basePrice: price,
+				capacity: storage ? storage.capacity : "",
+				color: color ? color.name : "",
+			},
+		})
 	}
 
 	const handleColorChange = (value: string) => {
@@ -104,7 +122,7 @@ export const ProductInfo = ({
 						</label>
 					</div>
 
-					<Button uppercase={true} disabled={isDisabled} onClick={handleAdd}>
+					<Button uppercase fw disabled={isDisabled} onClick={handleAdd}>
 						{t("add")}
 					</Button>
 				</div>

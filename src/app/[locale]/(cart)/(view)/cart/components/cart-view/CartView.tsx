@@ -1,0 +1,45 @@
+import { useContext } from "react"
+import { useCartTranslations } from "@app/cart/intl/useCartTranslations"
+import { CartStateContext } from "@/app/(state)/cart/CartStateContext"
+import { Button, Container, Heading, P } from "@/components"
+import styles from "./cart-view.module.css"
+import { CartProduct } from "../cart-product/CartProduct"
+
+export const CartView = () => {
+	const t = useCartTranslations()
+	const { state } = useContext(CartStateContext)
+
+	return (
+		<div className={styles.cart__view__wrapper_fw}>
+			<Heading as="h1" className={styles.cart__view__title}>
+				{t("count", { count: state.length })}
+			</Heading>
+
+			{state.map((item, index) => {
+				return <CartProduct key={`${index}_${item.id}`} product={item} />
+			})}
+			<Container className={styles.cart__view__cta__container}>
+				<div className={styles.cart__view__cta_float}>
+					<div className={styles.cart__view__continue_fw}>
+						<Button inverted uppercase fw>
+							{t("continue")}
+						</Button>
+					</div>
+
+					{state.length > 0 && (
+						<div className={styles.cart__view__cta_pay_horizontal}>
+							<P>
+								{t("total", {
+									total: state
+										.reduce((acc, item) => acc + item.basePrice, 0)
+										.toFixed(2),
+								})}
+							</P>
+							<Button uppercase>{t("pay")}</Button>
+						</div>
+					)}
+				</div>
+			</Container>
+		</div>
+	)
+}

@@ -11,6 +11,17 @@
 			"label": "Resultados de smartphones"
 		}
 	},
+	"cart": {
+		"count": "Carrito ({count})",
+		"continue": "Continuar comprando",
+		"pay": "Pagar",
+		"total": "Total: {total} EUR",
+		"capacity": "Capacity {capacity}",
+		"color": "Color: {color}",
+		"priceLabel": "Precio: {price} EUR",
+		"price": "{price} EUR",
+		"remove": "Eliminar"
+	},
 	"details": {
 		"price": "Desde {price} EUR",
 		"add": "Añadir",

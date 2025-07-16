@@ -3,6 +3,7 @@ import { render, RenderOptions } from "@testing-library/react"
 import { defaultLocale } from "@/shared/services/intl"
 import esTranslations from "../../public/locales/es.json"
 import enTranslations from "../../public/locales/en.json"
+import { AppWithState } from "@/app/(state)/AppWithState"
 
 const translations = {
 	es: esTranslations,
@@ -20,7 +21,7 @@ export const renderWithProviders = (
 				locale={options.locale || defaultLocale}
 				messages={messages}
 			>
-				{ui}
+				<AppWithState>{ui}</AppWithState>
 			</NextIntlClientProvider>,
 			options,
 		),

@@ -7,6 +7,7 @@ import { SimilarProduct } from "@app/detail/domain/SimilarProduct"
 export type ProductEntity = BaseEntity & {
 	rating: number
 	specs: ProductSpecs
+	basePrice: number
 	colorOptions: ColorOption[]
 	storageOptions: StorageOption[]
 	similarProducts: SimilarProduct[]

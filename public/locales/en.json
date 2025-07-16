@@ -11,6 +11,17 @@
 			"label": "Smartphone results"
 		}
 	},
+	"cart": {
+		"count": "Cart ({count})",
+		"continue": "Continue shopping",
+		"pay": "Pay",
+		"total": "Total: {total} EUR",
+		"capacity": "Capacity: {capacity}",
+		"color": "Color: {color}",
+		"priceLabel": "Price: {price} EUR",
+		"price": "{price} EUR",
+		"remove": "Remove"
+	},
 	"details": {
 		"price": "From {price} EUR",
 		"add": "Add",

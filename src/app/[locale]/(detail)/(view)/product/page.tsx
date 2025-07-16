@@ -2,7 +2,7 @@
 
 import React from "react"
 import dynamic from "next/dynamic"
-import { useBackLink } from "@/app/[locale]/(state)/useBackLink"
+import { useBackLink } from "@/app/(state)/return-link/useBackLink"
 
 const ProductDetailPageNoSSR = dynamic(() => import("./ProductDetail"), {
 	ssr: false,
@@ -10,6 +10,6 @@ const ProductDetailPageNoSSR = dynamic(() => import("./ProductDetail"), {
 
 export default function Page() {
 	useBackLink(true)
-	
+
 	return <ProductDetailPageNoSSR />
 }

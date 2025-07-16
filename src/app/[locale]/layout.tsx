@@ -6,7 +6,7 @@ import { routing } from "@/shared/services/intl/routing"
 import { AppNavBar } from "@/components/organisms/navbar/AppNavBar"
 import { Container, Footer, Header, Main } from "@/components"
 import "@/app/globals.css"
-import { AppWithState } from "./(state)/AppWithState"
+import { AppWithState } from "../(state)/AppWithState"
 
 export const metadata: Metadata = {
 	title: "Mobile Store",
@@ -40,9 +40,7 @@ export default async function RootLayout({
 							<Header>
 								<AppNavBar />
 							</Header>
-							<Main>
-								{children}
-							</Main>
+							<Main>{children}</Main>
 							<Footer></Footer>
 						</Container>
 					</AppWithState>

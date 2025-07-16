@@ -23,12 +23,15 @@ const ProductDetail = () => {
 
 	return (
 		<div className={styles.container}>
-				<ProductInfo
-					basePrice={data.basePrice}
-					colorOptions={data.colorOptions}
-					storageOptions={data.storageOptions}
-					title={data.name}
-				/>
+			<ProductInfo
+				basePrice={data.basePrice}
+				colorOptions={data.colorOptions}
+				storageOptions={data.storageOptions}
+				title={data.name}
+				brand={data.brand}
+				id={data.id}
+				name={data.name}
+			/>
 
 			<div>
 				<SpecificationsTable

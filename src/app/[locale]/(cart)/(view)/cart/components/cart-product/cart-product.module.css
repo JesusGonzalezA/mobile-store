@@ -1,0 +1,38 @@
+.cart__product {
+	display: flex;
+	gap: 2.5rem;
+}
+
+.light {
+	font-weight: 300;
+}
+
+.cart__product__info {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	display: flex;
+	gap: 0.25rem;
+	flex-direction: column;
+}
+
+.cart__product__info_space-between {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.cart__product__info__specs {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+
+	hr {
+		height: 100%;
+		transform: translateY(-40%);
+	}
+}
+
+.cart__product__info__price {
+	margin-top: 0.5rem;
+	font-weight: 300;
+}

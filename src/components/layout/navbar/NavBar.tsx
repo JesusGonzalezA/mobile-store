@@ -41,7 +41,11 @@ export const NavBar = ({
 				))}
 			</ul>
 			{hasReturn && (
-				<GhostButton onClick={handleGoBack} className={styles.return} role="link">
+				<GhostButton
+					onClick={handleGoBack}
+					className={styles.return}
+					role="link"
+				>
 					<div>
 						<BackIcon /> {t("navbar.return")}
 					</div>

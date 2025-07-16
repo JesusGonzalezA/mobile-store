@@ -21,16 +21,16 @@ export const FilterSection = () => {
 	}, 300)
 
 	return (
-			<div className={styles.search}>
-				<SearchInput
-					name="search"
-					label={t("search.placeholder")}
-					clearLabel={t("search.clear")}
-					onChange={handleChange}
-				/>
-				<P style={{ textTransform: "uppercase" }}>
-					{t("search.results", { count: data.length })}
-				</P>
-			</div>
+		<div className={styles.search}>
+			<SearchInput
+				name="search"
+				label={t("search.placeholder")}
+				clearLabel={t("search.clear")}
+				onChange={handleChange}
+			/>
+			<P style={{ textTransform: "uppercase" }}>
+				{t("search.results", { count: data.length })}
+			</P>
+		</div>
 	)
 }
