@@ -52,6 +52,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding: unset;
 
 	span {
 		font-weight: 300;

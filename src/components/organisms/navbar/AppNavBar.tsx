@@ -16,7 +16,7 @@ export const AppNavBar = () => {
 			baseUrl={`/${locale}`}
 			items={[
 				{
-					href: "/cart",
+					href: `/${locale}/cart`,
 					component: <CartIconWrapper cartLength={cartState.length} />,
 				},
 			]}
