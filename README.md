@@ -62,6 +62,8 @@ npm run lint:fix
 
 ## Funcionalidades a destacar
 
+- Uso pipelines
+- Separación ambientes desarrollo y producción.
 - Localización con intl
   - Uso de módulos para mejorar escalabilidad horizontal
 - Inyección de dependencias con inversify
