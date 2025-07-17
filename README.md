@@ -60,6 +60,13 @@ npm run lint:fix
   - /cart
   - /product?id=
 
+## Nomenclatura
+Carpetas: kebab-case
+Archivos que exportan una clase/interface/type: uppercamelcase
+Archivos que exportan una instancia: lowercamelcase
+
+Así, podrá ser fácilmente diferenciable qué esperar de cada importación
+
 ## Funcionalidades a destacar
 
 - Uso pipelines
